@@ -3,14 +3,34 @@ var Schema = mongoose.Schema;
 const userSchema = new Schema({
     userID:{
         type:String,
-        unique:true
+    },
+    firstName:{
+        type:String,
+    },
+    lastName:{
+        type:String,
+
+    },
+    emailId:{
+        type:String,
+    },
+    contactNumber:{
+        type:Number,
+
+    },
+    address:{
+        type:String,
+    },
+    private_key:{
+        type:String,
     },
     password:{
-        type:String
+        type:String,
     },
     department:{
-        type:String
+        type:String,
     }
+
 })
 
 module.exports = new mongoose.model('User',userSchema);
