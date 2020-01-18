@@ -4,18 +4,18 @@ const mongoose = require('mongoose');
 var loginUser = require('./js/loginUser')
 var registerUser = require('./js/registerUser')
 var createSurvey = require('./js/createSurvey');
-var verifyUser = require('./js/verifyUser')
+var verifyUser = require('./js/verifyUser');
+var getSurveys = require('./js/getSurveys')
 // Connect to database 
 mongoose.connect('mongodb://localhost:27017/SarveksanaDB')
 // Create A New Express App
 var app = new express()
 app.use(bodyParser.json())
 app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "http://localhost:5500"); // update to match the domain you will make the request from
+    res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
     next();
   });
-  
 // <---- End Of Setting Up CORS --->
 const PORT = 25565;
 // APP LISTEN
@@ -59,5 +59,9 @@ app.post('/registerUser',(req,res)=>{
 ////-----------------------------------------------------------
 
 app.get('/verifyUser',(req,res)=>{
- verifyUser(req,res)
+  verifyUser(req,res);
+})
+
+app.get('/getSurveys',(req,res)=>{
+    getSurveys(res);
 })

@@ -17,6 +17,7 @@ function verifyUser(req,res)
                 if(err || output==null)
                 {
                     res.json({is_successful:false});
+
                     console.log(err)
                 }
                 else
