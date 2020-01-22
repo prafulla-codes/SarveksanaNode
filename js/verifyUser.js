@@ -2,7 +2,7 @@ var jwt = require('jsonwebtoken');
 const mongoose = require('mongoose');
 const Users = require('../models/UserModel')
 
-function verifyUser(req,res)
+function verifyUser(req,res,next)
 {
     jwt.verify(req.headers.authorization,'sarveksana-user',(err,output)=>{
         if(err)
@@ -22,7 +22,10 @@ function verifyUser(req,res)
                 }
                 else
                 {
-                    res.json({is_successful:true,user:user})
+                    console.log("FOUND USER");
+                    console.log(user);
+                    req.user= user;
+                    next();
                 }
             })
         }

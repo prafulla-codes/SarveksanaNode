@@ -3061,3 +3061,25 @@
 2020-01-22T15:09:51.918+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:57524 #75 (2 connections now open)
 2020-01-22T15:09:51.925+0530 I  NETWORK  [conn75] received client metadata from 127.0.0.1:57524 conn75: { driver: { name: "nodejs|Mongoose", version: "3.4.1|5.8.3" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.3.0-26-generic" }, platform: "Node.js v8.10.0, LE" }
 2020-01-22T15:16:56.574+0530 I  NETWORK  [conn75] end connection 127.0.0.1:57524 (1 connection now open)
+2020-01-22T15:18:39.664+0530 I  CONTROL  [main] ***** SERVER RESTARTED *****
+2020-01-22T15:18:39.668+0530 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-01-22T15:18:39.673+0530 I  CONTROL  [initandlisten] MongoDB starting : pid=22752 port=27017 dbpath=/home/prafulla/Projects/SarveksanaNode/database/db 64-bit host=pika-ubuntu
+2020-01-22T15:18:39.674+0530 I  CONTROL  [initandlisten] db version v4.2.2
+2020-01-22T15:18:39.674+0530 I  CONTROL  [initandlisten] git version: a0bbbff6ada159e19298d37946ac8dc4b497eadf
+2020-01-22T15:18:39.674+0530 I  CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1  11 Sep 2018
+2020-01-22T15:18:39.674+0530 I  CONTROL  [initandlisten] allocator: tcmalloc
+2020-01-22T15:18:39.674+0530 I  CONTROL  [initandlisten] modules: none
+2020-01-22T15:18:39.674+0530 I  CONTROL  [initandlisten] build environment:
+2020-01-22T15:18:39.674+0530 I  CONTROL  [initandlisten]     distmod: ubuntu1804
+2020-01-22T15:18:39.674+0530 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-01-22T15:18:39.674+0530 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-01-22T15:18:39.674+0530 I  CONTROL  [initandlisten] options: { config: "database/config/mongod.conf", net: { bindIp: "localhost,127.0.0.1", port: 27017 }, processManagement: { fork: true }, storage: { dbPath: "database/db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "database/logs/mongod.log" } }
+2020-01-22T15:18:39.675+0530 E  STORAGE  [initandlisten] Failed to set up listener: SocketException: Address already in use
+2020-01-22T15:18:39.675+0530 I  CONTROL  [initandlisten] now exiting
+2020-01-22T15:18:39.675+0530 I  CONTROL  [initandlisten] shutting down with code:48
+2020-01-22T15:18:42.077+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:35546 #76 (2 connections now open)
+2020-01-22T15:18:42.087+0530 I  NETWORK  [conn76] received client metadata from 127.0.0.1:35546 conn76: { driver: { name: "nodejs|Mongoose", version: "3.4.1|5.8.3" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.3.0-26-generic" }, platform: "Node.js v8.10.0, LE" }
+2020-01-22T15:18:56.529+0530 I  NETWORK  [conn76] end connection 127.0.0.1:35546 (1 connection now open)
+2020-01-22T15:19:16.922+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:35870 #77 (2 connections now open)
+2020-01-22T15:19:16.929+0530 I  NETWORK  [conn77] received client metadata from 127.0.0.1:35870 conn77: { driver: { name: "nodejs|Mongoose", version: "3.4.1|5.8.3" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.3.0-26-generic" }, platform: "Node.js v8.10.0, LE" }
+2020-01-22T15:20:25.301+0530 I  NETWORK  [conn77] end connection 127.0.0.1:35870 (1 connection now open)

@@ -71,9 +71,12 @@ app.post('/registerUser',(req,res)=>{
 ////-----------------------------------------------------------
 
 // <---- Verifications  ------>
-app.get('/verifyUser',(req,res)=>{
-  
-  verifyUser(req,res);
+app.get('/verifyUser',(req,res,next)=>{
+  verifyUser(req,res,next);
+},(req,res)=>{
+    var user = req.user;
+    res.json({is_successful:true,user:user})
+
 })
 app.get('/verifySuperuser',(req,res,next)=>{
  console.log(req.headers.authorization)
