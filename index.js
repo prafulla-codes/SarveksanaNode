@@ -5,6 +5,7 @@ var loginUser = require('./js/loginUser')
 var registerUser = require('./js/registerUser')
 var createSurvey = require('./js/createSurvey');
 var verifyUser = require('./js/verifyUser');
+var verifySuperuser = require('./js/verifySuperuser');
 var getSurveys = require('./js/getSurveys');
 var getSurvey = require('./js/getSurvey');
 var loginSuperuser = require('./js/loginSuperuser')
@@ -71,7 +72,15 @@ app.post('/registerUser',(req,res)=>{
 
 // <---- Verifications  ------>
 app.get('/verifyUser',(req,res)=>{
+  
   verifyUser(req,res);
+})
+app.get('/verifySuperuser',(req,res,next)=>{
+ console.log(req.headers.authorization)
+ verifySuperuser(req,res,next);
+},(req,res)=>{
+    var user = req.user;
+    res.json({is_successful:true,user:user})
 })
 // <----- End of Verifications
 app.get('/getSurveys',(req,res)=>{
