@@ -7,7 +7,7 @@ var createSurvey = require('./js/createSurvey');
 var verifyUser = require('./js/verifyUser');
 var getSurveys = require('./js/getSurveys');
 var getSurvey = require('./js/getSurvey');
-var SuperUser = require('./models/SuperUserModel')
+var loginSuperuser = require('./js/loginSuperuser')
 // Connect to database 
 mongoose.connect('mongodb://localhost:27017/SarveksanaDB')
 // Create A New Express App
@@ -27,6 +27,7 @@ app.listen(PORT,()=>{
 app.get('/',(req,res)=>{
     res.send("hi")
 })
+// Logins
 app.post('/loginUser',(req,res)=>{
     console.log("[/loginUser] Called!")
     userID = req.body.userID;
@@ -34,6 +35,14 @@ app.post('/loginUser',(req,res)=>{
     loginUser(userID,password,res)
 
 })
+app.post('/loginSuperuser',(req,res)=>{
+    console.log("[/loginSuperuser] Called");
+    userID = req.body.userID;
+    password = req.body.password;
+    loginSuperuser(userID,password,res)
+
+})
+// End of Logins
 ////---------- CREATE SURVEY ----------------------------------
 
 app.post('/createSurvey',(req,res)=>{
@@ -60,10 +69,11 @@ app.post('/registerUser',(req,res)=>{
 })
 ////-----------------------------------------------------------
 
+// <---- Verifications  ------>
 app.get('/verifyUser',(req,res)=>{
   verifyUser(req,res);
 })
-
+// <----- End of Verifications
 app.get('/getSurveys',(req,res)=>{
     getSurveys(res);
 })
