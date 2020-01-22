@@ -6,6 +6,7 @@ var registerUser = require('./js/registerUser')
 var createSurvey = require('./js/createSurvey');
 var verifyUser = require('./js/verifyUser');
 var getSurveys = require('./js/getSurveys');
+var getSurvey = require('./js/getSurvey');
 var SuperUser = require('./models/SuperUserModel')
 // Connect to database 
 mongoose.connect('mongodb://localhost:27017/SarveksanaDB')
@@ -65,4 +66,9 @@ app.get('/verifyUser',(req,res)=>{
 
 app.get('/getSurveys',(req,res)=>{
     getSurveys(res);
+})
+
+app.post('/getSurvey',(req,res)=>{
+    let id = req.body.id;
+    getSurvey(id,res);
 })
