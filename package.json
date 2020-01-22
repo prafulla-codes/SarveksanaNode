@@ -4,7 +4,7 @@
   "description": "Sarveksana App Backend",
   "main": "index.js",
   "scripts": {
-    "dev":"mongod -f database/config/mongod.conf & nodemon index.js",
+    "dev": "ipfs daemon & mongod -f database/config/mongod.conf & nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Prafulla R",

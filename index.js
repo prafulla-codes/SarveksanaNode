@@ -5,7 +5,8 @@ var loginUser = require('./js/loginUser')
 var registerUser = require('./js/registerUser')
 var createSurvey = require('./js/createSurvey');
 var verifyUser = require('./js/verifyUser');
-var getSurveys = require('./js/getSurveys')
+var getSurveys = require('./js/getSurveys');
+var SuperUser = require('./models/SuperUserModel')
 // Connect to database 
 mongoose.connect('mongodb://localhost:27017/SarveksanaDB')
 // Create A New Express App

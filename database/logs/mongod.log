@@ -2114,3 +2114,681 @@
 2020-01-19T11:44:38.684+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:59146 #4 (1 connection now open)
 2020-01-19T11:44:38.690+0530 I  NETWORK  [conn4] received client metadata from 127.0.0.1:59146 conn4: { driver: { name: "nodejs|Mongoose", version: "3.4.1|5.8.3" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.0.0-37-generic" }, platform: "Node.js v8.10.0, LE" }
 2020-01-19T11:44:39.330+0530 I  NETWORK  [conn4] end connection 127.0.0.1:59146 (0 connections now open)
+2020-01-19T11:47:09.948+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:59248 #5 (1 connection now open)
+2020-01-19T11:47:09.954+0530 I  NETWORK  [conn5] received client metadata from 127.0.0.1:59248 conn5: { driver: { name: "nodejs|Mongoose", version: "3.4.1|5.8.3" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.0.0-37-generic" }, platform: "Node.js v8.10.0, LE" }
+2020-01-19T11:48:22.773+0530 I  SHARDING [conn5] Marking collection SarveksanaDB.users as collection version: <unsharded>
+2020-01-19T11:48:22.885+0530 I  COMMAND  [conn5] command SarveksanaDB.users command: find { find: "users", filter: { _id: ObjectId('5e1fe3993d97581c5c6b7d15') }, projection: { password: 0 }, limit: 1, singleBatch: true, batchSize: 1, returnKey: false, showRecordId: false, lsid: { id: UUID("669796e9-90f9-406d-966a-e8028384741a") }, $db: "SarveksanaDB" } planSummary: IDHACK keysExamined:1 docsExamined:1 cursorExhausted:1 numYields:0 nreturned:1 reslen:437 locks:{ ReplicationStateTransition: { acquireCount: { w: 1 } }, Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } }, Mutex: { acquireCount: { r: 1 } } } storage:{ data: { bytesRead: 1279, timeReadingMicros: 21 } } protocol:op_msg 111ms
+2020-01-19T11:48:32.364+0530 I  WRITE    [LogicalSessionCacheRefresh] update config.system.sessions command: { q: { _id: { id: UUID("669796e9-90f9-406d-966a-e8028384741a"), uid: BinData(0, E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855) } }, u: { $currentDate: { lastUse: true } }, multi: false, upsert: true } planSummary: IDHACK keysExamined:0 docsExamined:0 nMatched:0 nModified:0 upsert:1 keysInserted:2 numYields:0 locks:{ ParallelBatchWriterMode: { acquireCount: { r: 1 } }, ReplicationStateTransition: { acquireCount: { w: 1 } }, Global: { acquireCount: { w: 1 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { w: 1 } }, Mutex: { acquireCount: { r: 2 } } } flowControl:{ acquireCount: 1 } storage:{} 129ms
+2020-01-19T11:48:32.365+0530 I  COMMAND  [LogicalSessionCacheRefresh] command config.$cmd command: update { update: "system.sessions", ordered: false, allowImplicitCollectionCreation: false, writeConcern: { w: "majority", wtimeout: 15000 }, $db: "config" } numYields:0 reslen:171 locks:{ ParallelBatchWriterMode: { acquireCount: { r: 2 } }, ReplicationStateTransition: { acquireCount: { w: 2 } }, Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { w: 1 } }, Mutex: { acquireCount: { r: 2 } } } flowControl:{ acquireCount: 1 } storage:{} protocol:op_msg 129ms
+2020-01-19T11:49:45.871+0530 I  NETWORK  [conn5] end connection 127.0.0.1:59248 (0 connections now open)
+2020-01-19T11:49:47.571+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:59312 #6 (1 connection now open)
+2020-01-19T11:49:47.577+0530 I  NETWORK  [conn6] received client metadata from 127.0.0.1:59312 conn6: { driver: { name: "nodejs|Mongoose", version: "3.4.1|5.8.3" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.0.0-37-generic" }, platform: "Node.js v8.10.0, LE" }
+2020-01-19T11:52:19.416+0530 I  NETWORK  [conn6] end connection 127.0.0.1:59312 (0 connections now open)
+2020-01-19T11:52:21.426+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:59450 #7 (1 connection now open)
+2020-01-19T11:52:21.433+0530 I  NETWORK  [conn7] received client metadata from 127.0.0.1:59450 conn7: { driver: { name: "nodejs|Mongoose", version: "3.4.1|5.8.3" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.0.0-37-generic" }, platform: "Node.js v8.10.0, LE" }
+2020-01-19T11:52:40.056+0530 I  NETWORK  [conn7] end connection 127.0.0.1:59450 (0 connections now open)
+2020-01-19T11:52:41.836+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:59456 #8 (1 connection now open)
+2020-01-19T11:52:41.843+0530 I  NETWORK  [conn8] received client metadata from 127.0.0.1:59456 conn8: { driver: { name: "nodejs|Mongoose", version: "3.4.1|5.8.3" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.0.0-37-generic" }, platform: "Node.js v8.10.0, LE" }
+2020-01-19T11:53:38.188+0530 I  NETWORK  [conn8] end connection 127.0.0.1:59456 (0 connections now open)
+2020-01-19T11:53:39.971+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:59476 #9 (1 connection now open)
+2020-01-19T11:53:39.978+0530 I  NETWORK  [conn9] received client metadata from 127.0.0.1:59476 conn9: { driver: { name: "nodejs|Mongoose", version: "3.4.1|5.8.3" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.0.0-37-generic" }, platform: "Node.js v8.10.0, LE" }
+2020-01-19T11:54:35.504+0530 I  NETWORK  [conn9] end connection 127.0.0.1:59476 (0 connections now open)
+2020-01-19T11:54:37.265+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:59524 #10 (1 connection now open)
+2020-01-19T11:54:37.275+0530 I  NETWORK  [conn10] received client metadata from 127.0.0.1:59524 conn10: { driver: { name: "nodejs|Mongoose", version: "3.4.1|5.8.3" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.0.0-37-generic" }, platform: "Node.js v8.10.0, LE" }
+2020-01-19T11:55:05.159+0530 I  NETWORK  [conn10] end connection 127.0.0.1:59524 (0 connections now open)
+2020-01-19T11:55:06.970+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:59558 #11 (1 connection now open)
+2020-01-19T11:55:06.977+0530 I  NETWORK  [conn11] received client metadata from 127.0.0.1:59558 conn11: { driver: { name: "nodejs|Mongoose", version: "3.4.1|5.8.3" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.0.0-37-generic" }, platform: "Node.js v8.10.0, LE" }
+2020-01-19T11:56:41.165+0530 I  NETWORK  [conn11] end connection 127.0.0.1:59558 (0 connections now open)
+2020-01-19T11:57:48.627+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:59612 #12 (1 connection now open)
+2020-01-19T11:57:48.636+0530 I  NETWORK  [conn12] received client metadata from 127.0.0.1:59612 conn12: { driver: { name: "nodejs|Mongoose", version: "3.4.1|5.8.3" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.0.0-37-generic" }, platform: "Node.js v8.10.0, LE" }
+2020-01-19T11:58:30.602+0530 I  NETWORK  [conn12] end connection 127.0.0.1:59612 (0 connections now open)
+2020-01-19T11:59:05.898+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:59668 #13 (1 connection now open)
+2020-01-19T11:59:05.906+0530 I  NETWORK  [conn13] received client metadata from 127.0.0.1:59668 conn13: { driver: { name: "nodejs|Mongoose", version: "3.4.1|5.8.3" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.0.0-37-generic" }, platform: "Node.js v8.10.0, LE" }
+2020-01-19T12:00:35.227+0530 I  NETWORK  [conn13] end connection 127.0.0.1:59668 (0 connections now open)
+2020-01-19T12:00:36.980+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:59700 #14 (1 connection now open)
+2020-01-19T12:00:36.987+0530 I  NETWORK  [conn14] received client metadata from 127.0.0.1:59700 conn14: { driver: { name: "nodejs|Mongoose", version: "3.4.1|5.8.3" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.0.0-37-generic" }, platform: "Node.js v8.10.0, LE" }
+2020-01-19T12:00:46.195+0530 I  NETWORK  [conn14] end connection 127.0.0.1:59700 (0 connections now open)
+2020-01-19T12:00:47.976+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:59704 #15 (1 connection now open)
+2020-01-19T12:00:47.982+0530 I  NETWORK  [conn15] received client metadata from 127.0.0.1:59704 conn15: { driver: { name: "nodejs|Mongoose", version: "3.4.1|5.8.3" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.0.0-37-generic" }, platform: "Node.js v8.10.0, LE" }
+2020-01-19T12:00:58.545+0530 I  NETWORK  [conn15] end connection 127.0.0.1:59704 (0 connections now open)
+2020-01-19T12:01:00.302+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:59712 #16 (1 connection now open)
+2020-01-19T12:01:00.309+0530 I  NETWORK  [conn16] received client metadata from 127.0.0.1:59712 conn16: { driver: { name: "nodejs|Mongoose", version: "3.4.1|5.8.3" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.0.0-37-generic" }, platform: "Node.js v8.10.0, LE" }
+2020-01-19T12:01:44.877+0530 I  NETWORK  [conn16] end connection 127.0.0.1:59712 (0 connections now open)
+2020-01-19T12:01:46.686+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:59728 #17 (1 connection now open)
+2020-01-19T12:01:46.692+0530 I  NETWORK  [conn17] received client metadata from 127.0.0.1:59728 conn17: { driver: { name: "nodejs|Mongoose", version: "3.4.1|5.8.3" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.0.0-37-generic" }, platform: "Node.js v8.10.0, LE" }
+2020-01-19T12:01:57.450+0530 I  NETWORK  [conn17] end connection 127.0.0.1:59728 (0 connections now open)
+2020-01-19T12:01:59.225+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:59734 #18 (1 connection now open)
+2020-01-19T12:01:59.235+0530 I  NETWORK  [conn18] received client metadata from 127.0.0.1:59734 conn18: { driver: { name: "nodejs|Mongoose", version: "3.4.1|5.8.3" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.0.0-37-generic" }, platform: "Node.js v8.10.0, LE" }
+2020-01-19T12:03:24.887+0530 I  NETWORK  [conn18] end connection 127.0.0.1:59734 (0 connections now open)
+2020-01-19T12:03:26.636+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:59814 #19 (1 connection now open)
+2020-01-19T12:03:26.643+0530 I  NETWORK  [conn19] received client metadata from 127.0.0.1:59814 conn19: { driver: { name: "nodejs|Mongoose", version: "3.4.1|5.8.3" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.0.0-37-generic" }, platform: "Node.js v8.10.0, LE" }
+2020-01-19T12:03:29.318+0530 I  NETWORK  [conn19] end connection 127.0.0.1:59814 (0 connections now open)
+2020-01-19T12:03:31.352+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:59816 #20 (1 connection now open)
+2020-01-19T12:03:31.363+0530 I  NETWORK  [conn20] received client metadata from 127.0.0.1:59816 conn20: { driver: { name: "nodejs|Mongoose", version: "3.4.1|5.8.3" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.0.0-37-generic" }, platform: "Node.js v8.10.0, LE" }
+2020-01-19T12:05:27.882+0530 I  NETWORK  [conn20] end connection 127.0.0.1:59816 (0 connections now open)
+2020-01-19T12:05:31.149+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:59872 #21 (1 connection now open)
+2020-01-19T12:05:31.156+0530 I  NETWORK  [conn21] received client metadata from 127.0.0.1:59872 conn21: { driver: { name: "nodejs|Mongoose", version: "3.4.1|5.8.3" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.0.0-37-generic" }, platform: "Node.js v8.10.0, LE" }
+2020-01-19T12:05:40.873+0530 I  NETWORK  [conn21] end connection 127.0.0.1:59872 (0 connections now open)
+2020-01-19T12:05:42.722+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:59876 #22 (1 connection now open)
+2020-01-19T12:05:42.729+0530 I  NETWORK  [conn22] received client metadata from 127.0.0.1:59876 conn22: { driver: { name: "nodejs|Mongoose", version: "3.4.1|5.8.3" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.0.0-37-generic" }, platform: "Node.js v8.10.0, LE" }
+2020-01-19T12:06:01.279+0530 I  NETWORK  [conn22] end connection 127.0.0.1:59876 (0 connections now open)
+2020-01-19T12:06:03.057+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:59882 #23 (1 connection now open)
+2020-01-19T12:06:03.065+0530 I  NETWORK  [conn23] received client metadata from 127.0.0.1:59882 conn23: { driver: { name: "nodejs|Mongoose", version: "3.4.1|5.8.3" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.0.0-37-generic" }, platform: "Node.js v8.10.0, LE" }
+2020-01-19T12:06:24.667+0530 I  NETWORK  [conn23] end connection 127.0.0.1:59882 (0 connections now open)
+2020-01-19T12:06:26.416+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:59906 #24 (1 connection now open)
+2020-01-19T12:06:26.423+0530 I  NETWORK  [conn24] received client metadata from 127.0.0.1:59906 conn24: { driver: { name: "nodejs|Mongoose", version: "3.4.1|5.8.3" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.0.0-37-generic" }, platform: "Node.js v8.10.0, LE" }
+2020-01-19T12:46:00.551+0530 I  NETWORK  [conn24] end connection 127.0.0.1:59906 (0 connections now open)
+2020-01-19T12:46:01.450+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:60238 #25 (1 connection now open)
+2020-01-19T12:46:01.454+0530 I  NETWORK  [conn25] received client metadata from 127.0.0.1:60238 conn25: { driver: { name: "nodejs|Mongoose", version: "3.4.1|5.8.3" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.0.0-37-generic" }, platform: "Node.js v8.10.0, LE" }
+2020-01-19T12:46:18.270+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:60242 #26 (2 connections now open)
+2020-01-19T12:46:18.270+0530 I  NETWORK  [conn26] received client metadata from 127.0.0.1:60242 conn26: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.2.2" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "18.04" } }
+2020-01-19T12:47:10.231+0530 I  NETWORK  [conn25] end connection 127.0.0.1:60238 (1 connection now open)
+2020-01-19T12:47:11.118+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:60248 #27 (2 connections now open)
+2020-01-19T12:47:11.121+0530 I  NETWORK  [conn27] received client metadata from 127.0.0.1:60248 conn27: { driver: { name: "nodejs|Mongoose", version: "3.4.1|5.8.3" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.0.0-37-generic" }, platform: "Node.js v8.10.0, LE" }
+2020-01-19T12:49:29.158+0530 I  NETWORK  [conn27] end connection 127.0.0.1:60248 (1 connection now open)
+2020-01-19T12:49:38.982+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:60966 #28 (2 connections now open)
+2020-01-19T12:49:38.985+0530 I  NETWORK  [conn28] received client metadata from 127.0.0.1:60966 conn28: { driver: { name: "nodejs|Mongoose", version: "3.4.1|5.8.3" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.0.0-37-generic" }, platform: "Node.js v8.10.0, LE" }
+2020-01-19T12:49:40.060+0530 I  NETWORK  [conn28] end connection 127.0.0.1:60966 (1 connection now open)
+2020-01-19T12:50:56.287+0530 I  SHARDING [conn26] Marking collection SarveksanaDB.superusers as collection version: <unsharded>
+2020-01-19T12:50:56.288+0530 I  STORAGE  [conn26] createCollection: SarveksanaDB.superusers with generated UUID: 23aef9f4-8bfe-4c84-a5fa-b40156b8df7c and options: {}
+2020-01-19T12:51:01.170+0530 I  INDEX    [conn26] index build: done building index _id_ on ns SarveksanaDB.superusers
+2020-01-19T12:51:01.171+0530 I  COMMAND  [conn26] command SarveksanaDB.superusers appName: "MongoDB Shell" command: insert { insert: "superusers", ordered: true, lsid: { id: UUID("391d4538-ce48-400b-a1e7-e937035fb9a2") }, $db: "SarveksanaDB" } ninserted:1 keysInserted:1 numYields:0 reslen:45 locks:{ ParallelBatchWriterMode: { acquireCount: { r: 3 } }, ReplicationStateTransition: { acquireCount: { w: 3 } }, Global: { acquireCount: { w: 3 } }, Database: { acquireCount: { w: 3 } }, Collection: { acquireCount: { r: 2, w: 2, W: 1 } }, Mutex: { acquireCount: { r: 5 } } } flowControl:{ acquireCount: 3 } storage:{} protocol:op_msg 4883ms
+2020-01-19T14:25:03.464+0530 I  NETWORK  [conn26] end connection 127.0.0.1:60242 (0 connections now open)
+2020-01-20T09:50:23.611+0530 I  CONTROL  [main] ***** SERVER RESTARTED *****
+2020-01-20T09:50:23.744+0530 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-01-20T09:50:23.748+0530 I  CONTROL  [initandlisten] MongoDB starting : pid=5917 port=27017 dbpath=/home/prafulla/Projects/SarveksanaNode/../db 64-bit host=pika-ubuntu
+2020-01-20T09:50:23.748+0530 I  CONTROL  [initandlisten] db version v4.2.2
+2020-01-20T09:50:23.748+0530 I  CONTROL  [initandlisten] git version: a0bbbff6ada159e19298d37946ac8dc4b497eadf
+2020-01-20T09:50:23.748+0530 I  CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1  11 Sep 2018
+2020-01-20T09:50:23.748+0530 I  CONTROL  [initandlisten] allocator: tcmalloc
+2020-01-20T09:50:23.748+0530 I  CONTROL  [initandlisten] modules: none
+2020-01-20T09:50:23.748+0530 I  CONTROL  [initandlisten] build environment:
+2020-01-20T09:50:23.748+0530 I  CONTROL  [initandlisten]     distmod: ubuntu1804
+2020-01-20T09:50:23.748+0530 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-01-20T09:50:23.748+0530 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-01-20T09:50:23.748+0530 I  CONTROL  [initandlisten] options: { config: "database/config/mongod.conf", net: { bindIp: "localhost,127.0.0.1", port: 27017 }, processManagement: { fork: false }, storage: { dbPath: "../db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "/home/prafulla/Projects/SarveksanaNode/database/logs/mongod.log" } }
+2020-01-20T09:50:23.858+0530 I  STORAGE  [initandlisten] exception in initAndListen: NonExistentPath: Data directory /home/prafulla/Projects/SarveksanaNode/../db not found., terminating
+2020-01-20T09:50:23.868+0530 I  NETWORK  [initandlisten] shutdown: going to close listening sockets...
+2020-01-20T09:50:23.868+0530 I  NETWORK  [initandlisten] removing socket file: /tmp/mongodb-27017.sock
+2020-01-20T09:50:23.868+0530 I  -        [initandlisten] Stopping further Flow Control ticket acquisitions.
+2020-01-20T09:50:23.868+0530 I  CONTROL  [initandlisten] now exiting
+2020-01-20T09:50:23.868+0530 I  CONTROL  [initandlisten] shutting down with code:100
+2020-01-20T09:50:29.051+0530 I  CONTROL  [main] ***** SERVER RESTARTED *****
+2020-01-20T09:50:29.054+0530 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-01-20T09:50:29.058+0530 I  CONTROL  [initandlisten] MongoDB starting : pid=5928 port=27017 dbpath=/home/prafulla/Projects/SarveksanaNode/../db 64-bit host=pika-ubuntu
+2020-01-20T09:50:29.058+0530 I  CONTROL  [initandlisten] db version v4.2.2
+2020-01-20T09:50:29.058+0530 I  CONTROL  [initandlisten] git version: a0bbbff6ada159e19298d37946ac8dc4b497eadf
+2020-01-20T09:50:29.058+0530 I  CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1  11 Sep 2018
+2020-01-20T09:50:29.058+0530 I  CONTROL  [initandlisten] allocator: tcmalloc
+2020-01-20T09:50:29.058+0530 I  CONTROL  [initandlisten] modules: none
+2020-01-20T09:50:29.058+0530 I  CONTROL  [initandlisten] build environment:
+2020-01-20T09:50:29.058+0530 I  CONTROL  [initandlisten]     distmod: ubuntu1804
+2020-01-20T09:50:29.058+0530 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-01-20T09:50:29.058+0530 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-01-20T09:50:29.058+0530 I  CONTROL  [initandlisten] options: { config: "database/config/mongod.conf", net: { bindIp: "localhost,127.0.0.1", port: 27017 }, processManagement: { fork: false }, storage: { dbPath: "../db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "/home/prafulla/Projects/SarveksanaNode/database/logs/mongod.log" } }
+2020-01-20T09:50:29.059+0530 I  STORAGE  [initandlisten] exception in initAndListen: NonExistentPath: Data directory /home/prafulla/Projects/SarveksanaNode/../db not found., terminating
+2020-01-20T09:50:29.059+0530 I  NETWORK  [initandlisten] shutdown: going to close listening sockets...
+2020-01-20T09:50:29.059+0530 I  NETWORK  [initandlisten] removing socket file: /tmp/mongodb-27017.sock
+2020-01-20T09:50:29.059+0530 I  -        [initandlisten] Stopping further Flow Control ticket acquisitions.
+2020-01-20T09:50:29.059+0530 I  CONTROL  [initandlisten] now exiting
+2020-01-20T09:50:29.060+0530 I  CONTROL  [initandlisten] shutting down with code:100
+2020-01-20T09:50:52.765+0530 I  CONTROL  [main] ***** SERVER RESTARTED *****
+2020-01-20T09:50:52.770+0530 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-01-20T09:50:52.773+0530 I  CONTROL  [initandlisten] MongoDB starting : pid=5947 port=27017 dbpath=/home/prafulla/Projects/SarveksanaNode/../db 64-bit host=pika-ubuntu
+2020-01-20T09:50:52.773+0530 I  CONTROL  [initandlisten] db version v4.2.2
+2020-01-20T09:50:52.773+0530 I  CONTROL  [initandlisten] git version: a0bbbff6ada159e19298d37946ac8dc4b497eadf
+2020-01-20T09:50:52.773+0530 I  CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1  11 Sep 2018
+2020-01-20T09:50:52.773+0530 I  CONTROL  [initandlisten] allocator: tcmalloc
+2020-01-20T09:50:52.773+0530 I  CONTROL  [initandlisten] modules: none
+2020-01-20T09:50:52.773+0530 I  CONTROL  [initandlisten] build environment:
+2020-01-20T09:50:52.773+0530 I  CONTROL  [initandlisten]     distmod: ubuntu1804
+2020-01-20T09:50:52.773+0530 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-01-20T09:50:52.773+0530 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-01-20T09:50:52.773+0530 I  CONTROL  [initandlisten] options: { config: "database/config/mongod.conf", net: { bindIp: "localhost,127.0.0.1", port: 27017 }, processManagement: { fork: false }, storage: { dbPath: "../db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "/home/prafulla/Projects/SarveksanaNode/database/logs/mongod.log" } }
+2020-01-20T09:50:52.774+0530 I  STORAGE  [initandlisten] exception in initAndListen: NonExistentPath: Data directory /home/prafulla/Projects/SarveksanaNode/../db not found., terminating
+2020-01-20T09:50:52.774+0530 I  NETWORK  [initandlisten] shutdown: going to close listening sockets...
+2020-01-20T09:50:52.774+0530 I  NETWORK  [initandlisten] removing socket file: /tmp/mongodb-27017.sock
+2020-01-20T09:50:52.774+0530 I  -        [initandlisten] Stopping further Flow Control ticket acquisitions.
+2020-01-20T09:50:52.774+0530 I  CONTROL  [initandlisten] now exiting
+2020-01-20T09:50:52.774+0530 I  CONTROL  [initandlisten] shutting down with code:100
+2020-01-20T09:51:05.790+0530 I  CONTROL  [main] ***** SERVER RESTARTED *****
+2020-01-20T09:51:05.795+0530 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-01-20T09:51:05.798+0530 I  CONTROL  [initandlisten] MongoDB starting : pid=5968 port=27017 dbpath=/home/prafulla/Projects/SarveksanaNode/../db 64-bit host=pika-ubuntu
+2020-01-20T09:51:05.798+0530 I  CONTROL  [initandlisten] db version v4.2.2
+2020-01-20T09:51:05.798+0530 I  CONTROL  [initandlisten] git version: a0bbbff6ada159e19298d37946ac8dc4b497eadf
+2020-01-20T09:51:05.798+0530 I  CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1  11 Sep 2018
+2020-01-20T09:51:05.798+0530 I  CONTROL  [initandlisten] allocator: tcmalloc
+2020-01-20T09:51:05.798+0530 I  CONTROL  [initandlisten] modules: none
+2020-01-20T09:51:05.798+0530 I  CONTROL  [initandlisten] build environment:
+2020-01-20T09:51:05.798+0530 I  CONTROL  [initandlisten]     distmod: ubuntu1804
+2020-01-20T09:51:05.798+0530 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-01-20T09:51:05.798+0530 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-01-20T09:51:05.798+0530 I  CONTROL  [initandlisten] options: { config: "database/config/mongod.conf", net: { bindIp: "localhost,127.0.0.1", port: 27017 }, processManagement: { fork: false }, storage: { dbPath: "../db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "/home/prafulla/Projects/SarveksanaNode/database/logs/mongod.log" } }
+2020-01-20T09:51:05.799+0530 I  STORAGE  [initandlisten] exception in initAndListen: NonExistentPath: Data directory /home/prafulla/Projects/SarveksanaNode/../db not found., terminating
+2020-01-20T09:51:05.799+0530 I  NETWORK  [initandlisten] shutdown: going to close listening sockets...
+2020-01-20T09:51:05.800+0530 I  NETWORK  [initandlisten] removing socket file: /tmp/mongodb-27017.sock
+2020-01-20T09:51:05.800+0530 I  -        [initandlisten] Stopping further Flow Control ticket acquisitions.
+2020-01-20T09:51:05.800+0530 I  CONTROL  [initandlisten] now exiting
+2020-01-20T09:51:05.800+0530 I  CONTROL  [initandlisten] shutting down with code:100
+2020-01-20T09:51:07.227+0530 I  CONTROL  [main] ***** SERVER RESTARTED *****
+2020-01-20T09:51:07.231+0530 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-01-20T09:51:07.235+0530 I  CONTROL  [initandlisten] MongoDB starting : pid=5973 port=27017 dbpath=/home/prafulla/Projects/SarveksanaNode/../db 64-bit host=pika-ubuntu
+2020-01-20T09:51:07.235+0530 I  CONTROL  [initandlisten] db version v4.2.2
+2020-01-20T09:51:07.235+0530 I  CONTROL  [initandlisten] git version: a0bbbff6ada159e19298d37946ac8dc4b497eadf
+2020-01-20T09:51:07.235+0530 I  CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1  11 Sep 2018
+2020-01-20T09:51:07.235+0530 I  CONTROL  [initandlisten] allocator: tcmalloc
+2020-01-20T09:51:07.235+0530 I  CONTROL  [initandlisten] modules: none
+2020-01-20T09:51:07.235+0530 I  CONTROL  [initandlisten] build environment:
+2020-01-20T09:51:07.235+0530 I  CONTROL  [initandlisten]     distmod: ubuntu1804
+2020-01-20T09:51:07.235+0530 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-01-20T09:51:07.235+0530 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-01-20T09:51:07.235+0530 I  CONTROL  [initandlisten] options: { config: "database/config/mongod.conf", net: { bindIp: "localhost,127.0.0.1", port: 27017 }, processManagement: { fork: false }, storage: { dbPath: "../db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "/home/prafulla/Projects/SarveksanaNode/database/logs/mongod.log" } }
+2020-01-20T09:51:07.235+0530 I  STORAGE  [initandlisten] exception in initAndListen: NonExistentPath: Data directory /home/prafulla/Projects/SarveksanaNode/../db not found., terminating
+2020-01-20T09:51:07.236+0530 I  NETWORK  [initandlisten] shutdown: going to close listening sockets...
+2020-01-20T09:51:07.236+0530 I  NETWORK  [initandlisten] removing socket file: /tmp/mongodb-27017.sock
+2020-01-20T09:51:07.236+0530 I  -        [initandlisten] Stopping further Flow Control ticket acquisitions.
+2020-01-20T09:51:07.236+0530 I  CONTROL  [initandlisten] now exiting
+2020-01-20T09:51:07.236+0530 I  CONTROL  [initandlisten] shutting down with code:100
+2020-01-20T09:59:09.498+0530 I  CONTROL  [main] ***** SERVER RESTARTED *****
+2020-01-20T09:59:09.499+0530 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-01-20T09:59:09.505+0530 I  CONTROL  [initandlisten] MongoDB starting : pid=6413 port=27017 dbpath=/home/prafulla/Projects/SarveksanaNode/../db 64-bit host=pika-ubuntu
+2020-01-20T09:59:09.505+0530 I  CONTROL  [initandlisten] db version v4.2.2
+2020-01-20T09:59:09.505+0530 I  CONTROL  [initandlisten] git version: a0bbbff6ada159e19298d37946ac8dc4b497eadf
+2020-01-20T09:59:09.505+0530 I  CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1  11 Sep 2018
+2020-01-20T09:59:09.505+0530 I  CONTROL  [initandlisten] allocator: tcmalloc
+2020-01-20T09:59:09.505+0530 I  CONTROL  [initandlisten] modules: none
+2020-01-20T09:59:09.505+0530 I  CONTROL  [initandlisten] build environment:
+2020-01-20T09:59:09.505+0530 I  CONTROL  [initandlisten]     distmod: ubuntu1804
+2020-01-20T09:59:09.505+0530 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-01-20T09:59:09.505+0530 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-01-20T09:59:09.505+0530 I  CONTROL  [initandlisten] options: { config: "database/config/mongod.conf", net: { bindIp: "localhost,127.0.0.1", port: 27017 }, processManagement: { fork: false }, storage: { dbPath: "../db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "database/logs/mongod.log" } }
+2020-01-20T09:59:09.506+0530 I  STORAGE  [initandlisten] exception in initAndListen: NonExistentPath: Data directory /home/prafulla/Projects/SarveksanaNode/../db not found., terminating
+2020-01-20T09:59:09.506+0530 I  NETWORK  [initandlisten] shutdown: going to close listening sockets...
+2020-01-20T09:59:09.506+0530 I  NETWORK  [initandlisten] removing socket file: /tmp/mongodb-27017.sock
+2020-01-20T09:59:09.507+0530 I  -        [initandlisten] Stopping further Flow Control ticket acquisitions.
+2020-01-20T09:59:09.507+0530 I  CONTROL  [initandlisten] now exiting
+2020-01-20T09:59:09.507+0530 I  CONTROL  [initandlisten] shutting down with code:100
+2020-01-20T09:59:23.710+0530 I  CONTROL  [main] ***** SERVER RESTARTED *****
+2020-01-20T09:59:23.714+0530 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-01-20T09:59:23.719+0530 I  CONTROL  [initandlisten] MongoDB starting : pid=6429 port=27017 dbpath=/home/prafulla/Projects/SarveksanaNode/../db 64-bit host=pika-ubuntu
+2020-01-20T09:59:23.719+0530 I  CONTROL  [initandlisten] db version v4.2.2
+2020-01-20T09:59:23.719+0530 I  CONTROL  [initandlisten] git version: a0bbbff6ada159e19298d37946ac8dc4b497eadf
+2020-01-20T09:59:23.719+0530 I  CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1  11 Sep 2018
+2020-01-20T09:59:23.719+0530 I  CONTROL  [initandlisten] allocator: tcmalloc
+2020-01-20T09:59:23.719+0530 I  CONTROL  [initandlisten] modules: none
+2020-01-20T09:59:23.719+0530 I  CONTROL  [initandlisten] build environment:
+2020-01-20T09:59:23.719+0530 I  CONTROL  [initandlisten]     distmod: ubuntu1804
+2020-01-20T09:59:23.719+0530 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-01-20T09:59:23.719+0530 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-01-20T09:59:23.719+0530 I  CONTROL  [initandlisten] options: { config: "database/config/mongod.conf", net: { bindIp: "localhost,127.0.0.1", port: 27017 }, processManagement: { fork: false }, storage: { dbPath: "../db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "database/logs/mongod.log" } }
+2020-01-20T09:59:23.720+0530 I  STORAGE  [initandlisten] exception in initAndListen: NonExistentPath: Data directory /home/prafulla/Projects/SarveksanaNode/../db not found., terminating
+2020-01-20T09:59:23.720+0530 I  NETWORK  [initandlisten] shutdown: going to close listening sockets...
+2020-01-20T09:59:23.720+0530 I  NETWORK  [initandlisten] removing socket file: /tmp/mongodb-27017.sock
+2020-01-20T09:59:23.720+0530 I  -        [initandlisten] Stopping further Flow Control ticket acquisitions.
+2020-01-20T09:59:23.720+0530 I  CONTROL  [initandlisten] now exiting
+2020-01-20T09:59:23.720+0530 I  CONTROL  [initandlisten] shutting down with code:100
+2020-01-20T09:59:30.626+0530 I  CONTROL  [main] ***** SERVER RESTARTED *****
+2020-01-20T09:59:30.630+0530 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-01-20T09:59:30.634+0530 I  CONTROL  [initandlisten] MongoDB starting : pid=6440 port=27017 dbpath=/home/prafulla/Projects/SarveksanaNode/../db 64-bit host=pika-ubuntu
+2020-01-20T09:59:30.634+0530 I  CONTROL  [initandlisten] db version v4.2.2
+2020-01-20T09:59:30.634+0530 I  CONTROL  [initandlisten] git version: a0bbbff6ada159e19298d37946ac8dc4b497eadf
+2020-01-20T09:59:30.634+0530 I  CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1  11 Sep 2018
+2020-01-20T09:59:30.634+0530 I  CONTROL  [initandlisten] allocator: tcmalloc
+2020-01-20T09:59:30.634+0530 I  CONTROL  [initandlisten] modules: none
+2020-01-20T09:59:30.634+0530 I  CONTROL  [initandlisten] build environment:
+2020-01-20T09:59:30.634+0530 I  CONTROL  [initandlisten]     distmod: ubuntu1804
+2020-01-20T09:59:30.634+0530 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-01-20T09:59:30.634+0530 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-01-20T09:59:30.634+0530 I  CONTROL  [initandlisten] options: { config: "database/config/mongod.conf", net: { bindIp: "localhost,127.0.0.1", port: 27017 }, processManagement: { fork: false }, storage: { dbPath: "../db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "database/logs/mongod.log" } }
+2020-01-20T09:59:30.635+0530 I  STORAGE  [initandlisten] exception in initAndListen: NonExistentPath: Data directory /home/prafulla/Projects/SarveksanaNode/../db not found., terminating
+2020-01-20T09:59:30.635+0530 I  NETWORK  [initandlisten] shutdown: going to close listening sockets...
+2020-01-20T09:59:30.635+0530 I  NETWORK  [initandlisten] removing socket file: /tmp/mongodb-27017.sock
+2020-01-20T09:59:30.635+0530 I  -        [initandlisten] Stopping further Flow Control ticket acquisitions.
+2020-01-20T09:59:30.635+0530 I  CONTROL  [initandlisten] now exiting
+2020-01-20T09:59:30.635+0530 I  CONTROL  [initandlisten] shutting down with code:100
+2020-01-20T09:59:57.414+0530 I  CONTROL  [main] ***** SERVER RESTARTED *****
+2020-01-20T09:59:57.420+0530 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-01-20T09:59:57.422+0530 I  CONTROL  [initandlisten] MongoDB starting : pid=6484 port=27017 dbpath=/home/prafulla/Projects/SarveksanaNode/../db 64-bit host=pika-ubuntu
+2020-01-20T09:59:57.422+0530 I  CONTROL  [initandlisten] db version v4.2.2
+2020-01-20T09:59:57.422+0530 I  CONTROL  [initandlisten] git version: a0bbbff6ada159e19298d37946ac8dc4b497eadf
+2020-01-20T09:59:57.422+0530 I  CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1  11 Sep 2018
+2020-01-20T09:59:57.422+0530 I  CONTROL  [initandlisten] allocator: tcmalloc
+2020-01-20T09:59:57.422+0530 I  CONTROL  [initandlisten] modules: none
+2020-01-20T09:59:57.422+0530 I  CONTROL  [initandlisten] build environment:
+2020-01-20T09:59:57.422+0530 I  CONTROL  [initandlisten]     distmod: ubuntu1804
+2020-01-20T09:59:57.422+0530 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-01-20T09:59:57.422+0530 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-01-20T09:59:57.422+0530 I  CONTROL  [initandlisten] options: { config: "database/config/mongod.conf", net: { bindIp: "localhost,127.0.0.1", port: 27017 }, processManagement: { fork: false }, storage: { dbPath: "../db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "database/logs/mongod.log" } }
+2020-01-20T09:59:57.423+0530 I  STORAGE  [initandlisten] exception in initAndListen: NonExistentPath: Data directory /home/prafulla/Projects/SarveksanaNode/../db not found., terminating
+2020-01-20T09:59:57.423+0530 I  NETWORK  [initandlisten] shutdown: going to close listening sockets...
+2020-01-20T09:59:57.423+0530 I  NETWORK  [initandlisten] removing socket file: /tmp/mongodb-27017.sock
+2020-01-20T09:59:57.423+0530 I  -        [initandlisten] Stopping further Flow Control ticket acquisitions.
+2020-01-20T09:59:57.423+0530 I  CONTROL  [initandlisten] now exiting
+2020-01-20T09:59:57.423+0530 I  CONTROL  [initandlisten] shutting down with code:100
+2020-01-20T10:00:06.940+0530 I  CONTROL  [main] ***** SERVER RESTARTED *****
+2020-01-20T10:00:06.947+0530 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-01-20T10:00:06.950+0530 I  CONTROL  [initandlisten] MongoDB starting : pid=6523 port=27017 dbpath=/home/prafulla/Projects/SarveksanaNode/../db 64-bit host=pika-ubuntu
+2020-01-20T10:00:06.950+0530 I  CONTROL  [initandlisten] db version v4.2.2
+2020-01-20T10:00:06.950+0530 I  CONTROL  [initandlisten] git version: a0bbbff6ada159e19298d37946ac8dc4b497eadf
+2020-01-20T10:00:06.950+0530 I  CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1  11 Sep 2018
+2020-01-20T10:00:06.950+0530 I  CONTROL  [initandlisten] allocator: tcmalloc
+2020-01-20T10:00:06.950+0530 I  CONTROL  [initandlisten] modules: none
+2020-01-20T10:00:06.950+0530 I  CONTROL  [initandlisten] build environment:
+2020-01-20T10:00:06.950+0530 I  CONTROL  [initandlisten]     distmod: ubuntu1804
+2020-01-20T10:00:06.950+0530 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-01-20T10:00:06.950+0530 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-01-20T10:00:06.950+0530 I  CONTROL  [initandlisten] options: { config: "database/config/mongod.conf", net: { bindIp: "localhost,127.0.0.1", port: 27017 }, processManagement: { fork: true }, storage: { dbPath: "../db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "database/logs/mongod.log" } }
+2020-01-20T10:00:06.951+0530 I  STORAGE  [initandlisten] exception in initAndListen: NonExistentPath: Data directory /home/prafulla/Projects/SarveksanaNode/../db not found., terminating
+2020-01-20T10:00:06.952+0530 I  NETWORK  [initandlisten] shutdown: going to close listening sockets...
+2020-01-20T10:00:06.952+0530 I  NETWORK  [initandlisten] removing socket file: /tmp/mongodb-27017.sock
+2020-01-20T10:00:06.952+0530 I  -        [initandlisten] Stopping further Flow Control ticket acquisitions.
+2020-01-20T10:00:06.952+0530 I  CONTROL  [initandlisten] now exiting
+2020-01-20T10:00:06.952+0530 I  CONTROL  [initandlisten] shutting down with code:100
+2020-01-20T10:00:13.379+0530 I  CONTROL  [main] ***** SERVER RESTARTED *****
+2020-01-20T10:00:13.385+0530 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-01-20T10:00:13.388+0530 I  CONTROL  [initandlisten] MongoDB starting : pid=6537 port=27017 dbpath=/home/prafulla/Projects/SarveksanaNode/../db 64-bit host=pika-ubuntu
+2020-01-20T10:00:13.388+0530 I  CONTROL  [initandlisten] db version v4.2.2
+2020-01-20T10:00:13.388+0530 I  CONTROL  [initandlisten] git version: a0bbbff6ada159e19298d37946ac8dc4b497eadf
+2020-01-20T10:00:13.388+0530 I  CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1  11 Sep 2018
+2020-01-20T10:00:13.388+0530 I  CONTROL  [initandlisten] allocator: tcmalloc
+2020-01-20T10:00:13.388+0530 I  CONTROL  [initandlisten] modules: none
+2020-01-20T10:00:13.388+0530 I  CONTROL  [initandlisten] build environment:
+2020-01-20T10:00:13.388+0530 I  CONTROL  [initandlisten]     distmod: ubuntu1804
+2020-01-20T10:00:13.388+0530 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-01-20T10:00:13.388+0530 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-01-20T10:00:13.388+0530 I  CONTROL  [initandlisten] options: { config: "database/config/mongod.conf", net: { bindIp: "localhost,127.0.0.1", port: 27017 }, processManagement: { fork: true }, storage: { dbPath: "../db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "database/logs/mongod.log" } }
+2020-01-20T10:00:13.389+0530 I  STORAGE  [initandlisten] exception in initAndListen: NonExistentPath: Data directory /home/prafulla/Projects/SarveksanaNode/../db not found., terminating
+2020-01-20T10:00:13.389+0530 I  NETWORK  [initandlisten] shutdown: going to close listening sockets...
+2020-01-20T10:00:13.389+0530 I  NETWORK  [initandlisten] removing socket file: /tmp/mongodb-27017.sock
+2020-01-20T10:00:13.389+0530 I  -        [initandlisten] Stopping further Flow Control ticket acquisitions.
+2020-01-20T10:00:13.389+0530 I  CONTROL  [initandlisten] now exiting
+2020-01-20T10:00:13.389+0530 I  CONTROL  [initandlisten] shutting down with code:100
+2020-01-20T10:00:35.370+0530 I  CONTROL  [main] ***** SERVER RESTARTED *****
+2020-01-20T10:00:35.373+0530 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-01-20T10:00:35.377+0530 I  CONTROL  [initandlisten] MongoDB starting : pid=6570 port=27017 dbpath=../db 64-bit host=pika-ubuntu
+2020-01-20T10:00:35.377+0530 I  CONTROL  [initandlisten] db version v4.2.2
+2020-01-20T10:00:35.377+0530 I  CONTROL  [initandlisten] git version: a0bbbff6ada159e19298d37946ac8dc4b497eadf
+2020-01-20T10:00:35.377+0530 I  CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1  11 Sep 2018
+2020-01-20T10:00:35.377+0530 I  CONTROL  [initandlisten] allocator: tcmalloc
+2020-01-20T10:00:35.377+0530 I  CONTROL  [initandlisten] modules: none
+2020-01-20T10:00:35.377+0530 I  CONTROL  [initandlisten] build environment:
+2020-01-20T10:00:35.377+0530 I  CONTROL  [initandlisten]     distmod: ubuntu1804
+2020-01-20T10:00:35.377+0530 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-01-20T10:00:35.377+0530 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-01-20T10:00:35.377+0530 I  CONTROL  [initandlisten] options: { config: "database/config/mongod.conf", net: { bindIp: "localhost,127.0.0.1", port: 27017 }, storage: { dbPath: "../db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "database/logs/mongod.log" } }
+2020-01-20T10:00:35.378+0530 I  STORAGE  [initandlisten] exception in initAndListen: NonExistentPath: Data directory ../db not found., terminating
+2020-01-20T10:00:35.378+0530 I  NETWORK  [initandlisten] shutdown: going to close listening sockets...
+2020-01-20T10:00:35.378+0530 I  NETWORK  [initandlisten] removing socket file: /tmp/mongodb-27017.sock
+2020-01-20T10:00:35.378+0530 I  -        [initandlisten] Stopping further Flow Control ticket acquisitions.
+2020-01-20T10:00:35.378+0530 I  CONTROL  [initandlisten] now exiting
+2020-01-20T10:00:35.378+0530 I  CONTROL  [initandlisten] shutting down with code:100
+2020-01-20T10:01:18.419+0530 I  CONTROL  [main] ***** SERVER RESTARTED *****
+2020-01-20T10:01:18.422+0530 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-01-20T10:01:18.425+0530 I  CONTROL  [initandlisten] MongoDB starting : pid=6597 port=27017 dbpath=database/db 64-bit host=pika-ubuntu
+2020-01-20T10:01:18.425+0530 I  CONTROL  [initandlisten] db version v4.2.2
+2020-01-20T10:01:18.426+0530 I  CONTROL  [initandlisten] git version: a0bbbff6ada159e19298d37946ac8dc4b497eadf
+2020-01-20T10:01:18.426+0530 I  CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1  11 Sep 2018
+2020-01-20T10:01:18.426+0530 I  CONTROL  [initandlisten] allocator: tcmalloc
+2020-01-20T10:01:18.426+0530 I  CONTROL  [initandlisten] modules: none
+2020-01-20T10:01:18.426+0530 I  CONTROL  [initandlisten] build environment:
+2020-01-20T10:01:18.426+0530 I  CONTROL  [initandlisten]     distmod: ubuntu1804
+2020-01-20T10:01:18.426+0530 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-01-20T10:01:18.426+0530 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-01-20T10:01:18.426+0530 I  CONTROL  [initandlisten] options: { config: "database/config/mongod.conf", net: { bindIp: "localhost,127.0.0.1", port: 27017 }, storage: { dbPath: "database/db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "database/logs/mongod.log" } }
+2020-01-20T10:01:18.427+0530 W  STORAGE  [initandlisten] Detected unclean shutdown - database/db/mongod.lock is not empty.
+2020-01-20T10:01:18.427+0530 I  STORAGE  [initandlisten] Detected data files in database/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2020-01-20T10:01:18.427+0530 W  STORAGE  [initandlisten] Recovering data from the last clean checkpoint.
+2020-01-20T10:01:18.427+0530 I  STORAGE  [initandlisten] 
+2020-01-20T10:01:18.427+0530 I  STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2020-01-20T10:01:18.427+0530 I  STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2020-01-20T10:01:18.428+0530 I  STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3365M,cache_overflow=(file_max=0M),session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000,close_scan_interval=10,close_handle_minimum=250),statistics_log=(wait=0),verbose=[recovery_progress,checkpoint_progress],
+2020-01-20T10:01:20.052+0530 I  STORAGE  [initandlisten] WiredTiger message [1579494680:52629][6597:0x7fbc5e6fdb00], txn-recover: Recovering log 12 through 13
+2020-01-20T10:01:20.126+0530 I  STORAGE  [initandlisten] WiredTiger message [1579494680:126568][6597:0x7fbc5e6fdb00], txn-recover: Recovering log 13 through 13
+2020-01-20T10:01:20.245+0530 I  STORAGE  [initandlisten] WiredTiger message [1579494680:245588][6597:0x7fbc5e6fdb00], txn-recover: Main recovery loop: starting at 12/48256 to 13/256
+2020-01-20T10:01:20.358+0530 I  STORAGE  [initandlisten] WiredTiger message [1579494680:358946][6597:0x7fbc5e6fdb00], txn-recover: Recovering log 12 through 13
+2020-01-20T10:01:20.503+0530 I  STORAGE  [initandlisten] WiredTiger message [1579494680:503539][6597:0x7fbc5e6fdb00], txn-recover: Recovering log 13 through 13
+2020-01-20T10:01:20.574+0530 I  STORAGE  [initandlisten] WiredTiger message [1579494680:574311][6597:0x7fbc5e6fdb00], txn-recover: Set global recovery timestamp: (0,0)
+2020-01-20T10:01:20.908+0530 I  RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2020-01-20T10:01:21.046+0530 I  STORAGE  [initandlisten] Timestamp monitor starting
+2020-01-20T10:01:21.105+0530 I  CONTROL  [initandlisten] 
+2020-01-20T10:01:21.105+0530 I  CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2020-01-20T10:01:21.105+0530 I  CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2020-01-20T10:01:21.106+0530 I  CONTROL  [initandlisten] 
+2020-01-20T10:01:21.300+0530 I  SHARDING [initandlisten] Marking collection local.system.replset as collection version: <unsharded>
+2020-01-20T10:01:21.360+0530 I  STORAGE  [initandlisten] Flow Control is enabled on this deployment.
+2020-01-20T10:01:21.390+0530 I  SHARDING [initandlisten] Marking collection admin.system.roles as collection version: <unsharded>
+2020-01-20T10:01:21.395+0530 I  SHARDING [initandlisten] Marking collection admin.system.version as collection version: <unsharded>
+2020-01-20T10:01:21.449+0530 I  SHARDING [initandlisten] Marking collection local.startup_log as collection version: <unsharded>
+2020-01-20T10:01:21.450+0530 I  FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'database/db/diagnostic.data'
+2020-01-20T10:01:21.453+0530 I  SHARDING [LogicalSessionCacheRefresh] Marking collection config.system.sessions as collection version: <unsharded>
+2020-01-20T10:01:21.453+0530 I  NETWORK  [initandlisten] Listening on /tmp/mongodb-27017.sock
+2020-01-20T10:01:21.453+0530 I  NETWORK  [initandlisten] Listening on 127.0.0.1
+2020-01-20T10:01:21.454+0530 I  NETWORK  [initandlisten] waiting for connections on port 27017
+2020-01-20T10:01:21.476+0530 I  SHARDING [LogicalSessionCacheReap] Marking collection config.transactions as collection version: <unsharded>
+2020-01-20T10:01:22.069+0530 I  FTDC     [ftdc] Unclean full-time diagnostic data capture shutdown detected, found interim file, some metrics may have been lost. OK
+2020-01-20T10:01:22.243+0530 I  SHARDING [ftdc] Marking collection local.oplog.rs as collection version: <unsharded>
+2020-01-20T10:01:23.669+0530 I  CONTROL  [signalProcessingThread] got signal 2 (Interrupt), will terminate after current cmd ends
+2020-01-20T10:01:23.705+0530 I  NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2020-01-20T10:01:23.705+0530 I  NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+2020-01-20T10:01:23.706+0530 I  -        [signalProcessingThread] Stopping further Flow Control ticket acquisitions.
+2020-01-20T10:01:23.706+0530 I  CONTROL  [signalProcessingThread] Shutting down free monitoring
+2020-01-20T10:01:23.706+0530 I  FTDC     [signalProcessingThread] Shutting down full-time diagnostic data capture
+2020-01-20T10:01:23.709+0530 I  STORAGE  [signalProcessingThread] Deregistering all the collections
+2020-01-20T10:01:23.709+0530 I  STORAGE  [signalProcessingThread] Timestamp monitor shutting down
+2020-01-20T10:01:23.709+0530 I  STORAGE  [signalProcessingThread] WiredTigerKVEngine shutting down
+2020-01-20T10:01:23.745+0530 I  STORAGE  [signalProcessingThread] Shutting down session sweeper thread
+2020-01-20T10:01:23.746+0530 I  STORAGE  [signalProcessingThread] Finished shutting down session sweeper thread
+2020-01-20T10:01:23.746+0530 I  STORAGE  [signalProcessingThread] Shutting down journal flusher thread
+2020-01-20T10:01:23.757+0530 I  STORAGE  [signalProcessingThread] Finished shutting down journal flusher thread
+2020-01-20T10:01:23.757+0530 I  STORAGE  [signalProcessingThread] Shutting down checkpoint thread
+2020-01-20T10:01:23.757+0530 I  STORAGE  [signalProcessingThread] Finished shutting down checkpoint thread
+2020-01-20T10:01:24.096+0530 I  STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2020-01-20T10:01:24.096+0530 I  CONTROL  [signalProcessingThread] now exiting
+2020-01-20T10:01:24.096+0530 I  CONTROL  [signalProcessingThread] shutting down with code:0
+2020-01-20T10:01:35.908+0530 I  CONTROL  [main] ***** SERVER RESTARTED *****
+2020-01-20T10:01:35.911+0530 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-01-20T10:01:35.918+0530 I  CONTROL  [initandlisten] MongoDB starting : pid=6653 port=27017 dbpath=/home/prafulla/Projects/SarveksanaNode/database/db 64-bit host=pika-ubuntu
+2020-01-20T10:01:35.919+0530 I  CONTROL  [initandlisten] db version v4.2.2
+2020-01-20T10:01:35.919+0530 I  CONTROL  [initandlisten] git version: a0bbbff6ada159e19298d37946ac8dc4b497eadf
+2020-01-20T10:01:35.919+0530 I  CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1  11 Sep 2018
+2020-01-20T10:01:35.919+0530 I  CONTROL  [initandlisten] allocator: tcmalloc
+2020-01-20T10:01:35.919+0530 I  CONTROL  [initandlisten] modules: none
+2020-01-20T10:01:35.919+0530 I  CONTROL  [initandlisten] build environment:
+2020-01-20T10:01:35.919+0530 I  CONTROL  [initandlisten]     distmod: ubuntu1804
+2020-01-20T10:01:35.919+0530 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-01-20T10:01:35.919+0530 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-01-20T10:01:35.919+0530 I  CONTROL  [initandlisten] options: { config: "database/config/mongod.conf", net: { bindIp: "localhost,127.0.0.1", port: 27017 }, processManagement: { fork: true }, storage: { dbPath: "database/db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "database/logs/mongod.log" } }
+2020-01-20T10:01:35.920+0530 I  STORAGE  [initandlisten] Detected data files in /home/prafulla/Projects/SarveksanaNode/database/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2020-01-20T10:01:35.920+0530 I  STORAGE  [initandlisten] 
+2020-01-20T10:01:35.920+0530 I  STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2020-01-20T10:01:35.920+0530 I  STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2020-01-20T10:01:35.920+0530 I  STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3365M,cache_overflow=(file_max=0M),session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000,close_scan_interval=10,close_handle_minimum=250),statistics_log=(wait=0),verbose=[recovery_progress,checkpoint_progress],
+2020-01-20T10:01:37.374+0530 I  STORAGE  [initandlisten] WiredTiger message [1579494697:374946][6653:0x7f6497681b00], txn-recover: Recovering log 13 through 14
+2020-01-20T10:01:37.450+0530 I  STORAGE  [initandlisten] WiredTiger message [1579494697:450897][6653:0x7f6497681b00], txn-recover: Recovering log 14 through 14
+2020-01-20T10:01:37.536+0530 I  STORAGE  [initandlisten] WiredTiger message [1579494697:536417][6653:0x7f6497681b00], txn-recover: Main recovery loop: starting at 13/4864 to 14/256
+2020-01-20T10:01:37.648+0530 I  STORAGE  [initandlisten] WiredTiger message [1579494697:648355][6653:0x7f6497681b00], txn-recover: Recovering log 13 through 14
+2020-01-20T10:01:37.748+0530 I  STORAGE  [initandlisten] WiredTiger message [1579494697:748625][6653:0x7f6497681b00], txn-recover: Recovering log 14 through 14
+2020-01-20T10:01:37.804+0530 I  STORAGE  [initandlisten] WiredTiger message [1579494697:804664][6653:0x7f6497681b00], txn-recover: Set global recovery timestamp: (0,0)
+2020-01-20T10:01:38.197+0530 I  RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2020-01-20T10:01:38.212+0530 I  STORAGE  [initandlisten] Timestamp monitor starting
+2020-01-20T10:01:38.297+0530 I  CONTROL  [initandlisten] 
+2020-01-20T10:01:38.297+0530 I  CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2020-01-20T10:01:38.297+0530 I  CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2020-01-20T10:01:38.297+0530 I  CONTROL  [initandlisten] 
+2020-01-20T10:01:38.309+0530 I  SHARDING [initandlisten] Marking collection local.system.replset as collection version: <unsharded>
+2020-01-20T10:01:38.313+0530 I  STORAGE  [initandlisten] Flow Control is enabled on this deployment.
+2020-01-20T10:01:38.313+0530 I  SHARDING [initandlisten] Marking collection admin.system.roles as collection version: <unsharded>
+2020-01-20T10:01:38.313+0530 I  SHARDING [initandlisten] Marking collection admin.system.version as collection version: <unsharded>
+2020-01-20T10:01:38.318+0530 I  SHARDING [initandlisten] Marking collection local.startup_log as collection version: <unsharded>
+2020-01-20T10:01:38.319+0530 I  FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/home/prafulla/Projects/SarveksanaNode/database/db/diagnostic.data'
+2020-01-20T10:01:38.325+0530 I  SHARDING [LogicalSessionCacheRefresh] Marking collection config.system.sessions as collection version: <unsharded>
+2020-01-20T10:01:38.325+0530 I  NETWORK  [initandlisten] Listening on /tmp/mongodb-27017.sock
+2020-01-20T10:01:38.325+0530 I  NETWORK  [initandlisten] Listening on 127.0.0.1
+2020-01-20T10:01:38.325+0530 I  NETWORK  [initandlisten] waiting for connections on port 27017
+2020-01-20T10:01:38.325+0530 I  SHARDING [LogicalSessionCacheReap] Marking collection config.transactions as collection version: <unsharded>
+2020-01-20T10:01:39.001+0530 I  SHARDING [ftdc] Marking collection local.oplog.rs as collection version: <unsharded>
+2020-01-20T10:01:46.323+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:46926 #1 (1 connection now open)
+2020-01-20T10:01:46.486+0530 I  NETWORK  [conn1] received client metadata from 127.0.0.1:46926 conn1: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.2.2" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "18.04" } }
+2020-01-20T10:01:46.898+0530 I  COMMAND  [conn1] command admin.$cmd appName: "MongoDB Shell" command: replSetGetStatus { replSetGetStatus: 1.0, forShell: 1.0, $db: "admin" } numYields:0 ok:0 errMsg:"not running with --replSet" errName:NoReplicationEnabled errCode:76 reslen:122 locks:{} protocol:op_msg 325ms
+2020-01-20T10:01:57.491+0530 I  COMMAND  [conn1] terminating, shutdown command received { shutdown: 1.0, lsid: { id: UUID("e27c885f-f5fe-4b0e-82d1-5dc821ac1397") }, $db: "admin" }
+2020-01-20T10:01:57.492+0530 I  NETWORK  [conn1] shutdown: going to close listening sockets...
+2020-01-20T10:01:57.493+0530 I  NETWORK  [conn1] removing socket file: /tmp/mongodb-27017.sock
+2020-01-20T10:01:57.493+0530 I  -        [conn1] Stopping further Flow Control ticket acquisitions.
+2020-01-20T10:01:57.494+0530 I  CONTROL  [conn1] Shutting down free monitoring
+2020-01-20T10:01:57.494+0530 I  FTDC     [conn1] Shutting down full-time diagnostic data capture
+2020-01-20T10:01:57.500+0530 I  STORAGE  [conn1] Deregistering all the collections
+2020-01-20T10:01:57.500+0530 I  STORAGE  [conn1] Timestamp monitor shutting down
+2020-01-20T10:01:57.501+0530 I  STORAGE  [conn1] WiredTigerKVEngine shutting down
+2020-01-20T10:01:57.545+0530 I  STORAGE  [conn1] Shutting down session sweeper thread
+2020-01-20T10:01:57.545+0530 I  STORAGE  [conn1] Finished shutting down session sweeper thread
+2020-01-20T10:01:57.546+0530 I  STORAGE  [conn1] Shutting down journal flusher thread
+2020-01-20T10:01:57.552+0530 I  STORAGE  [conn1] Finished shutting down journal flusher thread
+2020-01-20T10:01:57.553+0530 I  STORAGE  [conn1] Shutting down checkpoint thread
+2020-01-20T10:01:57.553+0530 I  STORAGE  [conn1] Finished shutting down checkpoint thread
+2020-01-20T10:01:57.913+0530 I  STORAGE  [conn1] shutdown: removing fs lock...
+2020-01-20T10:01:57.913+0530 I  CONTROL  [conn1] now exiting
+2020-01-20T10:01:57.913+0530 I  CONTROL  [conn1] shutting down with code:0
+2020-01-20T10:02:06.236+0530 I  CONTROL  [main] ***** SERVER RESTARTED *****
+2020-01-20T10:02:06.242+0530 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-01-20T10:02:06.245+0530 I  CONTROL  [initandlisten] MongoDB starting : pid=6747 port=27017 dbpath=/home/prafulla/Projects/SarveksanaNode/database/db 64-bit host=pika-ubuntu
+2020-01-20T10:02:06.246+0530 I  CONTROL  [initandlisten] db version v4.2.2
+2020-01-20T10:02:06.246+0530 I  CONTROL  [initandlisten] git version: a0bbbff6ada159e19298d37946ac8dc4b497eadf
+2020-01-20T10:02:06.246+0530 I  CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1  11 Sep 2018
+2020-01-20T10:02:06.246+0530 I  CONTROL  [initandlisten] allocator: tcmalloc
+2020-01-20T10:02:06.246+0530 I  CONTROL  [initandlisten] modules: none
+2020-01-20T10:02:06.246+0530 I  CONTROL  [initandlisten] build environment:
+2020-01-20T10:02:06.246+0530 I  CONTROL  [initandlisten]     distmod: ubuntu1804
+2020-01-20T10:02:06.246+0530 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-01-20T10:02:06.246+0530 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-01-20T10:02:06.246+0530 I  CONTROL  [initandlisten] options: { config: "database/config/mongod.conf", net: { bindIp: "localhost,127.0.0.1", port: 27017 }, processManagement: { fork: true }, storage: { dbPath: "database/db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "database/logs/mongod.log" } }
+2020-01-20T10:02:06.247+0530 I  STORAGE  [initandlisten] Detected data files in /home/prafulla/Projects/SarveksanaNode/database/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2020-01-20T10:02:06.247+0530 I  STORAGE  [initandlisten] 
+2020-01-20T10:02:06.247+0530 I  STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2020-01-20T10:02:06.247+0530 I  STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2020-01-20T10:02:06.247+0530 I  STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3365M,cache_overflow=(file_max=0M),session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000,close_scan_interval=10,close_handle_minimum=250),statistics_log=(wait=0),verbose=[recovery_progress,checkpoint_progress],
+2020-01-20T10:02:07.371+0530 I  STORAGE  [initandlisten] WiredTiger message [1579494727:371143][6747:0x7f6c3645cb00], txn-recover: Recovering log 14 through 15
+2020-01-20T10:02:07.433+0530 I  STORAGE  [initandlisten] WiredTiger message [1579494727:433301][6747:0x7f6c3645cb00], txn-recover: Recovering log 15 through 15
+2020-01-20T10:02:07.522+0530 I  STORAGE  [initandlisten] WiredTiger message [1579494727:522244][6747:0x7f6c3645cb00], txn-recover: Main recovery loop: starting at 14/4864 to 15/256
+2020-01-20T10:02:07.637+0530 I  STORAGE  [initandlisten] WiredTiger message [1579494727:637056][6747:0x7f6c3645cb00], txn-recover: Recovering log 14 through 15
+2020-01-20T10:02:07.745+0530 I  STORAGE  [initandlisten] WiredTiger message [1579494727:745456][6747:0x7f6c3645cb00], txn-recover: Recovering log 15 through 15
+2020-01-20T10:02:07.802+0530 I  STORAGE  [initandlisten] WiredTiger message [1579494727:802736][6747:0x7f6c3645cb00], txn-recover: Set global recovery timestamp: (0,0)
+2020-01-20T10:02:08.153+0530 I  RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2020-01-20T10:02:08.162+0530 I  STORAGE  [initandlisten] Timestamp monitor starting
+2020-01-20T10:02:08.253+0530 I  CONTROL  [initandlisten] 
+2020-01-20T10:02:08.253+0530 I  CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2020-01-20T10:02:08.253+0530 I  CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2020-01-20T10:02:08.253+0530 I  CONTROL  [initandlisten] 
+2020-01-20T10:02:08.259+0530 I  SHARDING [initandlisten] Marking collection local.system.replset as collection version: <unsharded>
+2020-01-20T10:02:08.262+0530 I  STORAGE  [initandlisten] Flow Control is enabled on this deployment.
+2020-01-20T10:02:08.262+0530 I  SHARDING [initandlisten] Marking collection admin.system.roles as collection version: <unsharded>
+2020-01-20T10:02:08.262+0530 I  SHARDING [initandlisten] Marking collection admin.system.version as collection version: <unsharded>
+2020-01-20T10:02:08.264+0530 I  SHARDING [initandlisten] Marking collection local.startup_log as collection version: <unsharded>
+2020-01-20T10:02:08.264+0530 I  FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/home/prafulla/Projects/SarveksanaNode/database/db/diagnostic.data'
+2020-01-20T10:02:08.269+0530 I  SHARDING [LogicalSessionCacheRefresh] Marking collection config.system.sessions as collection version: <unsharded>
+2020-01-20T10:02:08.269+0530 I  NETWORK  [initandlisten] Listening on /tmp/mongodb-27017.sock
+2020-01-20T10:02:08.269+0530 I  NETWORK  [initandlisten] Listening on 127.0.0.1
+2020-01-20T10:02:08.269+0530 I  NETWORK  [initandlisten] waiting for connections on port 27017
+2020-01-20T10:02:08.269+0530 I  SHARDING [LogicalSessionCacheReap] Marking collection config.transactions as collection version: <unsharded>
+2020-01-20T10:02:08.771+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:46934 #1 (1 connection now open)
+2020-01-20T10:02:08.778+0530 I  NETWORK  [conn1] received client metadata from 127.0.0.1:46934 conn1: { driver: { name: "nodejs|Mongoose", version: "3.4.1|5.8.3" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.0.0-37-generic" }, platform: "Node.js v8.10.0, LE" }
+2020-01-20T10:02:09.001+0530 I  SHARDING [ftdc] Marking collection local.oplog.rs as collection version: <unsharded>
+2020-01-20T10:02:27.575+0530 I  SHARDING [conn1] Marking collection SarveksanaDB.users as collection version: <unsharded>
+2020-01-20T10:02:29.061+0530 I  SHARDING [conn1] Marking collection SarveksanaDB.surveys as collection version: <unsharded>
+2020-01-20T10:07:08.369+0530 I  WRITE    [LogicalSessionCacheRefresh] update config.system.sessions command: { q: { _id: { id: UUID("48257d52-dcbf-4d83-8da1-b91495d76f31"), uid: BinData(0, E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855) } }, u: { $currentDate: { lastUse: true } }, multi: false, upsert: true } planSummary: IDHACK keysExamined:0 docsExamined:0 nMatched:0 nModified:0 upsert:1 keysInserted:2 numYields:0 locks:{ ParallelBatchWriterMode: { acquireCount: { r: 1 } }, ReplicationStateTransition: { acquireCount: { w: 1 } }, Global: { acquireCount: { w: 1 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { w: 1 } }, Mutex: { acquireCount: { r: 2 } } } flowControl:{ acquireCount: 1 } storage:{} 100ms
+2020-01-20T10:07:08.370+0530 I  COMMAND  [LogicalSessionCacheRefresh] command config.$cmd command: update { update: "system.sessions", ordered: false, allowImplicitCollectionCreation: false, writeConcern: { w: "majority", wtimeout: 15000 }, $db: "config" } numYields:0 reslen:171 locks:{ ParallelBatchWriterMode: { acquireCount: { r: 2 } }, ReplicationStateTransition: { acquireCount: { w: 2 } }, Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { w: 1 } }, Mutex: { acquireCount: { r: 2 } } } flowControl:{ acquireCount: 1 } storage:{} protocol:op_msg 100ms
+2020-01-20T11:08:30.256+0530 I  NETWORK  [conn1] end connection 127.0.0.1:46934 (0 connections now open)
+2020-01-20T11:08:31.347+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:47306 #2 (1 connection now open)
+2020-01-20T11:08:31.351+0530 I  NETWORK  [conn2] received client metadata from 127.0.0.1:47306 conn2: { driver: { name: "nodejs|Mongoose", version: "3.4.1|5.8.3" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.0.0-37-generic" }, platform: "Node.js v8.10.0, LE" }
+2020-01-20T13:13:05.707+0530 I  CONTROL  [main] ***** SERVER RESTARTED *****
+2020-01-20T13:13:05.760+0530 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-01-20T13:13:05.804+0530 I  CONTROL  [initandlisten] MongoDB starting : pid=4570 port=27017 dbpath=/home/prafulla/Projects/SarveksanaNode/database/db 64-bit host=pika-ubuntu
+2020-01-20T13:13:05.804+0530 I  CONTROL  [initandlisten] db version v4.2.2
+2020-01-20T13:13:05.804+0530 I  CONTROL  [initandlisten] git version: a0bbbff6ada159e19298d37946ac8dc4b497eadf
+2020-01-20T13:13:05.804+0530 I  CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1  11 Sep 2018
+2020-01-20T13:13:05.804+0530 I  CONTROL  [initandlisten] allocator: tcmalloc
+2020-01-20T13:13:05.804+0530 I  CONTROL  [initandlisten] modules: none
+2020-01-20T13:13:05.804+0530 I  CONTROL  [initandlisten] build environment:
+2020-01-20T13:13:05.804+0530 I  CONTROL  [initandlisten]     distmod: ubuntu1804
+2020-01-20T13:13:05.804+0530 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-01-20T13:13:05.804+0530 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-01-20T13:13:05.804+0530 I  CONTROL  [initandlisten] options: { config: "database/config/mongod.conf", net: { bindIp: "localhost,127.0.0.1", port: 27017 }, processManagement: { fork: true }, storage: { dbPath: "database/db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "database/logs/mongod.log" } }
+2020-01-20T13:13:05.805+0530 W  STORAGE  [initandlisten] Detected unclean shutdown - /home/prafulla/Projects/SarveksanaNode/database/db/mongod.lock is not empty.
+2020-01-20T13:13:05.819+0530 I  STORAGE  [initandlisten] Detected data files in /home/prafulla/Projects/SarveksanaNode/database/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2020-01-20T13:13:05.820+0530 W  STORAGE  [initandlisten] Recovering data from the last clean checkpoint.
+2020-01-20T13:13:05.820+0530 I  STORAGE  [initandlisten] 
+2020-01-20T13:13:05.820+0530 I  STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2020-01-20T13:13:05.820+0530 I  STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2020-01-20T13:13:05.820+0530 I  STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3365M,cache_overflow=(file_max=0M),session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000,close_scan_interval=10,close_handle_minimum=250),statistics_log=(wait=0),verbose=[recovery_progress,checkpoint_progress],
+2020-01-20T13:13:07.407+0530 I  STORAGE  [initandlisten] WiredTiger message [1579506187:407382][4570:0x7f9e89c81b00], txn-recover: Recovering log 15 through 16
+2020-01-20T13:13:07.510+0530 I  STORAGE  [initandlisten] WiredTiger message [1579506187:510806][4570:0x7f9e89c81b00], txn-recover: Recovering log 16 through 16
+2020-01-20T13:13:07.664+0530 I  STORAGE  [initandlisten] WiredTiger message [1579506187:664487][4570:0x7f9e89c81b00], txn-recover: Main recovery loop: starting at 15/13184 to 16/256
+2020-01-20T13:13:07.796+0530 I  STORAGE  [initandlisten] WiredTiger message [1579506187:796024][4570:0x7f9e89c81b00], txn-recover: Recovering log 15 through 16
+2020-01-20T13:13:07.934+0530 I  STORAGE  [initandlisten] WiredTiger message [1579506187:934968][4570:0x7f9e89c81b00], txn-recover: Recovering log 16 through 16
+2020-01-20T13:13:08.008+0530 I  STORAGE  [initandlisten] WiredTiger message [1579506188:8462][4570:0x7f9e89c81b00], txn-recover: Set global recovery timestamp: (0,0)
+2020-01-20T13:13:08.547+0530 I  RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2020-01-20T13:13:08.747+0530 I  STORAGE  [initandlisten] Timestamp monitor starting
+2020-01-20T13:13:08.859+0530 I  CONTROL  [initandlisten] 
+2020-01-20T13:13:08.859+0530 I  CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2020-01-20T13:13:08.859+0530 I  CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2020-01-20T13:13:08.859+0530 I  CONTROL  [initandlisten] 
+2020-01-20T13:13:09.064+0530 I  SHARDING [initandlisten] Marking collection local.system.replset as collection version: <unsharded>
+2020-01-20T13:13:09.142+0530 I  STORAGE  [initandlisten] Flow Control is enabled on this deployment.
+2020-01-20T13:13:09.144+0530 I  SHARDING [initandlisten] Marking collection admin.system.roles as collection version: <unsharded>
+2020-01-20T13:13:09.145+0530 I  SHARDING [initandlisten] Marking collection admin.system.version as collection version: <unsharded>
+2020-01-20T13:13:09.202+0530 I  SHARDING [initandlisten] Marking collection local.startup_log as collection version: <unsharded>
+2020-01-20T13:13:09.203+0530 I  FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/home/prafulla/Projects/SarveksanaNode/database/db/diagnostic.data'
+2020-01-20T13:13:09.362+0530 I  SHARDING [LogicalSessionCacheRefresh] Marking collection config.system.sessions as collection version: <unsharded>
+2020-01-20T13:13:09.362+0530 I  NETWORK  [initandlisten] Listening on /tmp/mongodb-27017.sock
+2020-01-20T13:13:09.362+0530 I  NETWORK  [initandlisten] Listening on 127.0.0.1
+2020-01-20T13:13:09.362+0530 I  NETWORK  [initandlisten] waiting for connections on port 27017
+2020-01-20T13:13:09.364+0530 I  SHARDING [LogicalSessionCacheReap] Marking collection config.transactions as collection version: <unsharded>
+2020-01-20T13:13:10.051+0530 I  FTDC     [ftdc] Unclean full-time diagnostic data capture shutdown detected, found interim file, some metrics may have been lost. OK
+2020-01-20T13:13:10.113+0530 I  SHARDING [ftdc] Marking collection local.oplog.rs as collection version: <unsharded>
+2020-01-20T13:13:16.454+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:37102 #1 (1 connection now open)
+2020-01-20T13:13:16.505+0530 I  NETWORK  [conn1] received client metadata from 127.0.0.1:37102 conn1: { driver: { name: "nodejs|Mongoose", version: "3.4.1|5.8.3" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.0.0-37-generic" }, platform: "Node.js v8.10.0, LE" }
+2020-01-20T13:26:18.900+0530 I  SHARDING [conn1] Marking collection SarveksanaDB.users as collection version: <unsharded>
+2020-01-20T13:26:20.549+0530 I  SHARDING [conn1] Marking collection SarveksanaDB.surveys as collection version: <unsharded>
+2020-01-20T13:28:09.677+0530 I  WRITE    [LogicalSessionCacheRefresh] update config.system.sessions command: { q: { _id: { id: UUID("9df0023e-5bd6-4f40-890f-9ff67610ca5f"), uid: BinData(0, E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855) } }, u: { $currentDate: { lastUse: true } }, multi: false, upsert: true } planSummary: IDHACK keysExamined:0 docsExamined:0 nMatched:0 nModified:0 upsert:1 keysInserted:2 numYields:0 locks:{ ParallelBatchWriterMode: { acquireCount: { r: 1 } }, ReplicationStateTransition: { acquireCount: { w: 1 } }, Global: { acquireCount: { w: 1 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { w: 1 } }, Mutex: { acquireCount: { r: 2 } } } flowControl:{ acquireCount: 1 } storage:{} 315ms
+2020-01-20T13:28:09.677+0530 I  COMMAND  [LogicalSessionCacheRefresh] command config.$cmd command: update { update: "system.sessions", ordered: false, allowImplicitCollectionCreation: false, writeConcern: { w: "majority", wtimeout: 15000 }, $db: "config" } numYields:0 reslen:171 locks:{ ParallelBatchWriterMode: { acquireCount: { r: 2 } }, ReplicationStateTransition: { acquireCount: { w: 2 } }, Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { w: 1 } }, Mutex: { acquireCount: { r: 2 } } } flowControl:{ acquireCount: 1 } storage:{} protocol:op_msg 315ms
+2020-01-20T13:50:03.696+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:46632 #2 (2 connections now open)
+2020-01-20T13:50:03.697+0530 I  NETWORK  [conn2] received client metadata from 127.0.0.1:46632 conn2: { driver: { name: "nodejs|Mongoose", version: "3.4.1|5.8.3" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.0.0-37-generic" }, platform: "Node.js v8.10.0, LE" }
+2020-01-20T13:54:12.435+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:52172 #3 (3 connections now open)
+2020-01-20T13:54:12.435+0530 I  NETWORK  [conn3] received client metadata from 127.0.0.1:52172 conn3: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.2.2" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "18.04" } }
+2020-01-20T20:31:25.595+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:33698 #4 (4 connections now open)
+2020-01-20T20:31:25.596+0530 I  NETWORK  [conn4] received client metadata from 127.0.0.1:33698 conn4: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.2.2" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "18.04" } }
+2020-01-20T20:31:25.674+0530 I  NETWORK  [conn1] end connection 127.0.0.1:37102 (2 connections now open)
+2020-01-20T20:31:25.674+0530 I  NETWORK  [conn2] end connection 127.0.0.1:46632 (3 connections now open)
+2020-01-20T20:31:26.009+0530 I  COMMAND  [conn4] command admin.$cmd.aggregate appName: "MongoDB Shell" command: currentOp { currentOp: 1, $db: "admin" } keysExamined:0 docsExamined:0 cursorExhausted:1 numYields:0 nreturned:1 reslen:1089 locks:{} protocol:op_msg 412ms
+2020-01-20T20:31:26.009+0530 I  NETWORK  [conn4] end connection 127.0.0.1:33698 (1 connection now open)
+2020-01-20T20:31:26.011+0530 I  NETWORK  [conn3] end connection 127.0.0.1:52172 (0 connections now open)
+2020-01-22T10:33:48.935+0530 I  CONTROL  [main] ***** SERVER RESTARTED *****
+2020-01-22T10:33:48.964+0530 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-01-22T10:33:48.984+0530 I  CONTROL  [initandlisten] MongoDB starting : pid=15663 port=27017 dbpath=/home/prafulla/Projects/SarveksanaNode/database/db 64-bit host=pika-ubuntu
+2020-01-22T10:33:48.984+0530 I  CONTROL  [initandlisten] db version v4.2.2
+2020-01-22T10:33:48.984+0530 I  CONTROL  [initandlisten] git version: a0bbbff6ada159e19298d37946ac8dc4b497eadf
+2020-01-22T10:33:48.984+0530 I  CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1  11 Sep 2018
+2020-01-22T10:33:48.984+0530 I  CONTROL  [initandlisten] allocator: tcmalloc
+2020-01-22T10:33:48.985+0530 I  CONTROL  [initandlisten] modules: none
+2020-01-22T10:33:48.985+0530 I  CONTROL  [initandlisten] build environment:
+2020-01-22T10:33:48.985+0530 I  CONTROL  [initandlisten]     distmod: ubuntu1804
+2020-01-22T10:33:48.985+0530 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-01-22T10:33:48.985+0530 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-01-22T10:33:48.985+0530 I  CONTROL  [initandlisten] options: { config: "database/config/mongod.conf", net: { bindIp: "localhost,127.0.0.1", port: 27017 }, processManagement: { fork: true }, storage: { dbPath: "database/db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "database/logs/mongod.log" } }
+2020-01-22T10:33:48.986+0530 W  STORAGE  [initandlisten] Detected unclean shutdown - /home/prafulla/Projects/SarveksanaNode/database/db/mongod.lock is not empty.
+2020-01-22T10:33:48.986+0530 I  STORAGE  [initandlisten] Detected data files in /home/prafulla/Projects/SarveksanaNode/database/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2020-01-22T10:33:48.986+0530 W  STORAGE  [initandlisten] Recovering data from the last clean checkpoint.
+2020-01-22T10:33:48.986+0530 I  STORAGE  [initandlisten] 
+2020-01-22T10:33:48.986+0530 I  STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2020-01-22T10:33:48.986+0530 I  STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2020-01-22T10:33:48.986+0530 I  STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3365M,cache_overflow=(file_max=0M),session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000,close_scan_interval=10,close_handle_minimum=250),statistics_log=(wait=0),verbose=[recovery_progress,checkpoint_progress],
+2020-01-22T10:33:50.449+0530 I  STORAGE  [initandlisten] WiredTiger message [1579669430:449304][15663:0x7f1df5d80b00], txn-recover: Recovering log 16 through 17
+2020-01-22T10:33:50.532+0530 I  STORAGE  [initandlisten] WiredTiger message [1579669430:532822][15663:0x7f1df5d80b00], txn-recover: Recovering log 17 through 17
+2020-01-22T10:33:50.649+0530 I  STORAGE  [initandlisten] WiredTiger message [1579669430:649081][15663:0x7f1df5d80b00], txn-recover: Main recovery loop: starting at 16/33664 to 17/256
+2020-01-22T10:33:50.757+0530 I  STORAGE  [initandlisten] WiredTiger message [1579669430:757236][15663:0x7f1df5d80b00], txn-recover: Recovering log 16 through 17
+2020-01-22T10:33:50.890+0530 I  STORAGE  [initandlisten] WiredTiger message [1579669430:890733][15663:0x7f1df5d80b00], txn-recover: Recovering log 17 through 17
+2020-01-22T10:33:50.962+0530 I  STORAGE  [initandlisten] WiredTiger message [1579669430:962502][15663:0x7f1df5d80b00], txn-recover: Set global recovery timestamp: (0,0)
+2020-01-22T10:33:51.676+0530 I  RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2020-01-22T10:33:51.736+0530 I  STORAGE  [initandlisten] Timestamp monitor starting
+2020-01-22T10:33:51.902+0530 I  CONTROL  [initandlisten] 
+2020-01-22T10:33:51.902+0530 I  CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2020-01-22T10:33:51.902+0530 I  CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2020-01-22T10:33:51.903+0530 I  CONTROL  [initandlisten] 
+2020-01-22T10:33:52.091+0530 I  SHARDING [initandlisten] Marking collection local.system.replset as collection version: <unsharded>
+2020-01-22T10:33:52.113+0530 I  STORAGE  [initandlisten] Flow Control is enabled on this deployment.
+2020-01-22T10:33:52.114+0530 I  SHARDING [initandlisten] Marking collection admin.system.roles as collection version: <unsharded>
+2020-01-22T10:33:52.115+0530 I  SHARDING [initandlisten] Marking collection admin.system.version as collection version: <unsharded>
+2020-01-22T10:33:52.118+0530 I  SHARDING [initandlisten] Marking collection local.startup_log as collection version: <unsharded>
+2020-01-22T10:33:52.119+0530 I  FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/home/prafulla/Projects/SarveksanaNode/database/db/diagnostic.data'
+2020-01-22T10:33:52.121+0530 I  SHARDING [LogicalSessionCacheRefresh] Marking collection config.system.sessions as collection version: <unsharded>
+2020-01-22T10:33:52.121+0530 I  NETWORK  [initandlisten] Listening on /tmp/mongodb-27017.sock
+2020-01-22T10:33:52.121+0530 I  NETWORK  [initandlisten] Listening on 127.0.0.1
+2020-01-22T10:33:52.121+0530 I  SHARDING [LogicalSessionCacheReap] Marking collection config.transactions as collection version: <unsharded>
+2020-01-22T10:33:52.121+0530 I  NETWORK  [initandlisten] waiting for connections on port 27017
+2020-01-22T10:33:53.031+0530 I  FTDC     [ftdc] Unclean full-time diagnostic data capture shutdown detected, found interim file, some metrics may have been lost. OK
+2020-01-22T10:33:53.125+0530 I  SHARDING [ftdc] Marking collection local.oplog.rs as collection version: <unsharded>
+2020-01-22T10:33:58.469+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:50182 #1 (1 connection now open)
+2020-01-22T10:33:58.520+0530 I  NETWORK  [conn1] received client metadata from 127.0.0.1:50182 conn1: { driver: { name: "nodejs|Mongoose", version: "3.4.1|5.8.3" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.0.0-37-generic" }, platform: "Node.js v8.10.0, LE" }
+2020-01-22T10:35:39.208+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:50186 #2 (2 connections now open)
+2020-01-22T10:35:39.209+0530 I  NETWORK  [conn2] received client metadata from 127.0.0.1:50186 conn2: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.2.2" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "18.04" } }
+2020-01-22T10:35:39.341+0530 I  COMMAND  [conn2] command admin.$cmd appName: "MongoDB Shell" command: replSetGetStatus { replSetGetStatus: 1.0, forShell: 1.0, $db: "admin" } numYields:0 ok:0 errMsg:"not running with --replSet" errName:NoReplicationEnabled errCode:76 reslen:122 locks:{} protocol:op_msg 109ms
+2020-01-22T10:35:51.469+0530 I  SHARDING [conn2] Marking collection SarveksanaDB.surveys as collection version: <unsharded>
+2020-01-22T10:36:26.382+0530 I  NETWORK  [conn1] end connection 127.0.0.1:50182 (1 connection now open)
+2020-01-22T10:36:28.265+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:50194 #3 (2 connections now open)
+2020-01-22T10:36:28.272+0530 I  NETWORK  [conn3] received client metadata from 127.0.0.1:50194 conn3: { driver: { name: "nodejs|Mongoose", version: "3.4.1|5.8.3" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.0.0-37-generic" }, platform: "Node.js v8.10.0, LE" }
+2020-01-22T10:36:34.093+0530 I  NETWORK  [conn3] end connection 127.0.0.1:50194 (1 connection now open)
+2020-01-22T10:36:35.982+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:50200 #4 (2 connections now open)
+2020-01-22T10:36:35.989+0530 I  NETWORK  [conn4] received client metadata from 127.0.0.1:50200 conn4: { driver: { name: "nodejs|Mongoose", version: "3.4.1|5.8.3" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.0.0-37-generic" }, platform: "Node.js v8.10.0, LE" }
+2020-01-22T10:42:59.795+0530 I  NETWORK  [conn4] end connection 127.0.0.1:50200 (1 connection now open)
+2020-01-22T10:43:11.839+0530 I  CONTROL  [main] ***** SERVER RESTARTED *****
+2020-01-22T10:43:11.846+0530 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-01-22T10:43:11.848+0530 I  CONTROL  [initandlisten] MongoDB starting : pid=16617 port=27017 dbpath=/home/prafulla/Projects/SarveksanaNode/database/db 64-bit host=pika-ubuntu
+2020-01-22T10:43:11.849+0530 I  CONTROL  [initandlisten] db version v4.2.2
+2020-01-22T10:43:11.849+0530 I  CONTROL  [initandlisten] git version: a0bbbff6ada159e19298d37946ac8dc4b497eadf
+2020-01-22T10:43:11.849+0530 I  CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1  11 Sep 2018
+2020-01-22T10:43:11.849+0530 I  CONTROL  [initandlisten] allocator: tcmalloc
+2020-01-22T10:43:11.849+0530 I  CONTROL  [initandlisten] modules: none
+2020-01-22T10:43:11.849+0530 I  CONTROL  [initandlisten] build environment:
+2020-01-22T10:43:11.849+0530 I  CONTROL  [initandlisten]     distmod: ubuntu1804
+2020-01-22T10:43:11.849+0530 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-01-22T10:43:11.849+0530 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-01-22T10:43:11.849+0530 I  CONTROL  [initandlisten] options: { config: "database/config/mongod.conf", net: { bindIp: "localhost,127.0.0.1", port: 27017 }, processManagement: { fork: true }, storage: { dbPath: "database/db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "database/logs/mongod.log" } }
+2020-01-22T10:43:11.849+0530 E  STORAGE  [initandlisten] Failed to set up listener: SocketException: Address already in use
+2020-01-22T10:43:11.850+0530 I  CONTROL  [initandlisten] now exiting
+2020-01-22T10:43:11.850+0530 I  CONTROL  [initandlisten] shutting down with code:48
+2020-01-22T10:43:14.432+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:50740 #5 (2 connections now open)
+2020-01-22T10:43:14.438+0530 I  NETWORK  [conn5] received client metadata from 127.0.0.1:50740 conn5: { driver: { name: "nodejs|Mongoose", version: "3.4.1|5.8.3" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.0.0-37-generic" }, platform: "Node.js v8.10.0, LE" }
+2020-01-22T10:43:24.730+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:50938 #6 (3 connections now open)
+2020-01-22T10:43:24.732+0530 I  NETWORK  [conn6] received client metadata from 127.0.0.1:50938 conn6: { driver: { name: "nodejs|Mongoose", version: "3.4.1|5.8.3" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.0.0-37-generic" }, platform: "Node.js v8.10.0, LE" }
+2020-01-22T11:28:14.593+0530 I  CONTROL  [main] ***** SERVER RESTARTED *****
+2020-01-22T11:28:14.695+0530 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-01-22T11:28:14.791+0530 I  CONTROL  [initandlisten] MongoDB starting : pid=5163 port=27017 dbpath=/home/prafulla/Projects/SarveksanaNode/database/db 64-bit host=pika-ubuntu
+2020-01-22T11:28:14.791+0530 I  CONTROL  [initandlisten] db version v4.2.2
+2020-01-22T11:28:14.791+0530 I  CONTROL  [initandlisten] git version: a0bbbff6ada159e19298d37946ac8dc4b497eadf
+2020-01-22T11:28:14.791+0530 I  CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1  11 Sep 2018
+2020-01-22T11:28:14.792+0530 I  CONTROL  [initandlisten] allocator: tcmalloc
+2020-01-22T11:28:14.792+0530 I  CONTROL  [initandlisten] modules: none
+2020-01-22T11:28:14.792+0530 I  CONTROL  [initandlisten] build environment:
+2020-01-22T11:28:14.792+0530 I  CONTROL  [initandlisten]     distmod: ubuntu1804
+2020-01-22T11:28:14.792+0530 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-01-22T11:28:14.792+0530 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-01-22T11:28:14.792+0530 I  CONTROL  [initandlisten] options: { config: "database/config/mongod.conf", net: { bindIp: "localhost,127.0.0.1", port: 27017 }, processManagement: { fork: true }, storage: { dbPath: "database/db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "database/logs/mongod.log" } }
+2020-01-22T11:28:14.794+0530 W  STORAGE  [initandlisten] Detected unclean shutdown - /home/prafulla/Projects/SarveksanaNode/database/db/mongod.lock is not empty.
+2020-01-22T11:28:14.816+0530 I  STORAGE  [initandlisten] Detected data files in /home/prafulla/Projects/SarveksanaNode/database/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2020-01-22T11:28:14.816+0530 W  STORAGE  [initandlisten] Recovering data from the last clean checkpoint.
+2020-01-22T11:28:14.816+0530 I  STORAGE  [initandlisten] 
+2020-01-22T11:28:14.816+0530 I  STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2020-01-22T11:28:14.816+0530 I  STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2020-01-22T11:28:14.816+0530 I  STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3359M,cache_overflow=(file_max=0M),session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000,close_scan_interval=10,close_handle_minimum=250),statistics_log=(wait=0),verbose=[recovery_progress,checkpoint_progress],
+2020-01-22T11:28:16.510+0530 I  STORAGE  [initandlisten] WiredTiger message [1579672696:510439][5163:0x7fb3daedeb00], txn-recover: Recovering log 17 through 18
+2020-01-22T11:28:16.644+0530 I  STORAGE  [initandlisten] WiredTiger message [1579672696:644492][5163:0x7fb3daedeb00], txn-recover: Recovering log 18 through 18
+2020-01-22T11:28:16.800+0530 I  STORAGE  [initandlisten] WiredTiger message [1579672696:800659][5163:0x7fb3daedeb00], txn-recover: Main recovery loop: starting at 17/17536 to 18/256
+2020-01-22T11:28:16.904+0530 I  STORAGE  [initandlisten] WiredTiger message [1579672696:904553][5163:0x7fb3daedeb00], txn-recover: Recovering log 17 through 18
+2020-01-22T11:28:17.126+0530 I  STORAGE  [initandlisten] WiredTiger message [1579672697:126151][5163:0x7fb3daedeb00], txn-recover: Recovering log 18 through 18
+2020-01-22T11:28:17.191+0530 I  STORAGE  [initandlisten] WiredTiger message [1579672697:191395][5163:0x7fb3daedeb00], txn-recover: Set global recovery timestamp: (0,0)
+2020-01-22T11:28:17.825+0530 I  RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2020-01-22T11:28:17.865+0530 I  STORAGE  [initandlisten] Timestamp monitor starting
+2020-01-22T11:28:18.027+0530 I  CONTROL  [initandlisten] 
+2020-01-22T11:28:18.027+0530 I  CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2020-01-22T11:28:18.027+0530 I  CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2020-01-22T11:28:18.027+0530 I  CONTROL  [initandlisten] 
+2020-01-22T11:28:18.217+0530 I  SHARDING [initandlisten] Marking collection local.system.replset as collection version: <unsharded>
+2020-01-22T11:28:18.238+0530 I  STORAGE  [initandlisten] Flow Control is enabled on this deployment.
+2020-01-22T11:28:18.239+0530 I  SHARDING [initandlisten] Marking collection admin.system.roles as collection version: <unsharded>
+2020-01-22T11:28:18.240+0530 I  SHARDING [initandlisten] Marking collection admin.system.version as collection version: <unsharded>
+2020-01-22T11:28:18.241+0530 I  SHARDING [initandlisten] Marking collection local.startup_log as collection version: <unsharded>
+2020-01-22T11:28:18.242+0530 I  FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/home/prafulla/Projects/SarveksanaNode/database/db/diagnostic.data'
+2020-01-22T11:28:18.294+0530 I  SHARDING [LogicalSessionCacheRefresh] Marking collection config.system.sessions as collection version: <unsharded>
+2020-01-22T11:28:18.294+0530 I  NETWORK  [initandlisten] Listening on /tmp/mongodb-27017.sock
+2020-01-22T11:28:18.295+0530 I  NETWORK  [initandlisten] Listening on 127.0.0.1
+2020-01-22T11:28:18.295+0530 I  NETWORK  [initandlisten] waiting for connections on port 27017
+2020-01-22T11:28:18.363+0530 I  SHARDING [LogicalSessionCacheReap] Marking collection config.transactions as collection version: <unsharded>
+2020-01-22T11:28:19.033+0530 I  FTDC     [ftdc] Unclean full-time diagnostic data capture shutdown detected, found interim file, some metrics may have been lost. OK
+2020-01-22T11:28:19.158+0530 I  SHARDING [ftdc] Marking collection local.oplog.rs as collection version: <unsharded>
+2020-01-22T11:28:27.253+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:43982 #1 (1 connection now open)
+2020-01-22T11:28:27.287+0530 I  NETWORK  [conn1] received client metadata from 127.0.0.1:43982 conn1: { driver: { name: "nodejs|Mongoose", version: "3.4.1|5.8.3" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.3.0-26-generic" }, platform: "Node.js v8.10.0, LE" }
+2020-01-22T11:55:23.663+0530 I  SHARDING [conn1] Marking collection SarveksanaDB.users as collection version: <unsharded>
+2020-01-22T11:55:25.164+0530 I  SHARDING [conn1] Marking collection SarveksanaDB.surveys as collection version: <unsharded>
+2020-01-22T12:15:50.066+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:45616 #2 (2 connections now open)
+2020-01-22T12:15:50.068+0530 I  NETWORK  [conn2] received client metadata from 127.0.0.1:45616 conn2: { driver: { name: "nodejs|Mongoose", version: "3.4.1|5.8.3" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.3.0-26-generic" }, platform: "Node.js v8.10.0, LE" }
+2020-01-22T12:29:38.492+0530 I  NETWORK  [conn1] end connection 127.0.0.1:43982 (0 connections now open)
+2020-01-22T12:29:38.492+0530 I  NETWORK  [conn2] end connection 127.0.0.1:45616 (1 connection now open)

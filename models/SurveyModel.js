@@ -6,12 +6,6 @@ const surveySchema = new Schema({
   },
   ipfs_path:{
       type:String
-  },
-  ipfs_hash:{
-      type:String
-  },
-  ipfs_size:{
-    type:String
   }
 })
 
