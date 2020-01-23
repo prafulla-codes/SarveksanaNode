@@ -2,14 +2,17 @@ let express = require('express');
 let bodyParser = require('body-parser')
 const mongoose = require('mongoose');
 let loginUser = require('./js/loginUser')
+let loginAdmin = require('./js/loginAdmin');
+let loginSuperuser = require('./js/loginSuperuser')
+
 let registerUser = require('./js/registerUser')
 let createSurvey = require('./js/createSurvey');
 let verifyUser = require('./js/verifyUser');
+let verifyAdmin = require('./js/verifyAdmin')
 let verifySuperuser = require('./js/verifySuperuser');
 let getSurveys = require('./js/getSurveys');
 let getSurvey = require('./js/getSurvey');
 let createAdmin = require('./js/createAdmin');
-let loginSuperuser = require('./js/loginSuperuser')
 // Connect to database 
 mongoose.connect('mongodb://localhost:27017/SarveksanaDB')
 // Create A New Express App
@@ -43,6 +46,12 @@ app.post('/loginSuperuser',(req,res)=>{
     password = req.body.password;
     loginSuperuser(userID,password,res)
 
+})
+app.post('/loginAdmin',(req,res)=>{
+    console.log("[/loginAdmin] Called");
+    userID = req.body.userID;
+    password = req.body.password;
+    loginAdmin(userID,password,res);
 })
 // End of Logins
 ////---------- CREATE SURVEY ----------------------------------
@@ -92,6 +101,15 @@ app.get('/verifySuperuser',(req,res,next)=>{
     var user = req.user;
     res.json({is_successful:true,user:user})
 })
+
+app.get('/verifyAdmin',(req,res,next)=>{
+    console.log("[verifyAdmin] Called")
+    console.log(req.headers.authorization)
+    verifyAdmin(req,res,next);
+   },(req,res)=>{
+       var user = req.user;
+       res.json({is_successful:true,user:user})
+   })
 // <----- End of Verifications
 app.get('/getSurveys',(req,res)=>{
     getSurveys(res);
