@@ -1,14 +1,15 @@
-var express = require('express');
-var bodyParser = require('body-parser')
+let express = require('express');
+let bodyParser = require('body-parser')
 const mongoose = require('mongoose');
-var loginUser = require('./js/loginUser')
-var registerUser = require('./js/registerUser')
-var createSurvey = require('./js/createSurvey');
-var verifyUser = require('./js/verifyUser');
-var verifySuperuser = require('./js/verifySuperuser');
-var getSurveys = require('./js/getSurveys');
-var getSurvey = require('./js/getSurvey');
-var loginSuperuser = require('./js/loginSuperuser')
+let loginUser = require('./js/loginUser')
+let registerUser = require('./js/registerUser')
+let createSurvey = require('./js/createSurvey');
+let verifyUser = require('./js/verifyUser');
+let verifySuperuser = require('./js/verifySuperuser');
+let getSurveys = require('./js/getSurveys');
+let getSurvey = require('./js/getSurvey');
+let createAdmin = require('./js/createAdmin');
+let loginSuperuser = require('./js/loginSuperuser')
 // Connect to database 
 mongoose.connect('mongodb://localhost:27017/SarveksanaDB')
 // Create A New Express App
@@ -68,6 +69,11 @@ app.post('/registerUser',(req,res)=>{
     var department = req.body.department;
     registerUser(firstName,lastName,userId,password,emailId,contactNumber,department,res);
 })
+////--------------- CREATE ADMIN -------------------------------
+app.post('/createAdmin',verifySuperuser,(req,res)=>{
+    console.log("[Create Admin] Called, Superuser verified")
+    createAdmin(req,res);
+})
 ////-----------------------------------------------------------
 
 // <---- Verifications  ------>
@@ -79,6 +85,7 @@ app.get('/verifyUser',(req,res,next)=>{
 
 })
 app.get('/verifySuperuser',(req,res,next)=>{
+ console.log("[verifySuperuser] Called")
  console.log(req.headers.authorization)
  verifySuperuser(req,res,next);
 },(req,res)=>{

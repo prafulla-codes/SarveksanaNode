@@ -21,6 +21,7 @@ function verifySuperuser(req,res,next){
                 {
                     console.log("FOUND SUPER USER");
                     console.log(user);
+                    req.body=req.body;
                     req.user = user;
                     next();
                 }

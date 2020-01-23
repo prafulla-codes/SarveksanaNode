@@ -24,7 +24,7 @@ function verifyUser(req,res,next)
                 {
                     console.log("FOUND USER");
                     console.log(user);
-                    req.user= user;
+                    req.user = user;
                     next();
                 }
             })
