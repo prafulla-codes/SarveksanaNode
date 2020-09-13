@@ -3,16 +3,16 @@ let bodyParser = require('body-parser')
 const mongoose = require('mongoose');
 let loginUser = require('./js/loginUser')
 let loginAdmin = require('./js/loginAdmin');
-let loginSuperuser = require('./js/loginSuperuser')
+let loginSupervisor = require('./js/loginSupervisor')
 
 let registerUser = require('./js/registerUser')
 let createSurvey = require('./js/createSurvey');
 let verifyUser = require('./js/verifyUser');
 let verifyAdmin = require('./js/verifyAdmin')
-let verifySuperuser = require('./js/verifySuperuser');
+let verifySupervisor = require('./js/verifySupervisor');
 let getSurveys = require('./js/getSurveys');
 let getSurvey = require('./js/getSurvey');
-let createAdmin = require('./js/createAdmin');
+let createSupervisor = require('./js/createSupervisor');
 // Connect to database 
 mongoose.connect('mongodb://localhost:27017/SarveksanaDB')
 // Create A New Express App
@@ -40,11 +40,11 @@ app.post('/loginUser',(req,res)=>{
     loginUser(userID,password,res)
 
 })
-app.post('/loginSuperuser',(req,res)=>{
-    console.log("[/loginSuperuser] Called");
+app.post('/loginSupervisor',(req,res)=>{
+    console.log("[/loginSupervisor] Called");
     userID = req.body.userID;
     password = req.body.password;
-    loginSuperuser(userID,password,res)
+    loginSupervisor(userID,password,res)
 
 })
 app.post('/loginAdmin',(req,res)=>{
@@ -62,9 +62,8 @@ app.post('/createSurvey',(req,res)=>{
 
     let survey_title = req.body.survey_title;
     let ipfs_path = req.body.ipfs_path;
-    let ipfs_hash = req.body.ipfs_hash;
-    let ipfs_size = req.body.ipfs_size;
-    createSurvey(survey_title,ipfs_path,ipfs_hash,ipfs_size,res);
+
+    createSurvey(survey_title,ipfs_path,res);
 })
 ////-----------REGISTER USER ----------------------------------
 app.post('/registerUser',(req,res)=>{
@@ -79,9 +78,9 @@ app.post('/registerUser',(req,res)=>{
     registerUser(firstName,lastName,userId,password,emailId,contactNumber,department,res);
 })
 ////--------------- CREATE ADMIN -------------------------------
-app.post('/createAdmin',verifySuperuser,(req,res)=>{
-    console.log("[Create Admin] Called, Superuser verified")
-    createAdmin(req,res);
+app.post('/createSupervisor',verifyAdmin,(req,res)=>{
+    console.log("[Create Supervisor] Called, Admin verified")
+    createSupervisor(req,res);
 })
 ////-----------------------------------------------------------
 
@@ -93,10 +92,11 @@ app.get('/verifyUser',(req,res,next)=>{
     res.json({is_successful:true,user:user})
 
 })
-app.get('/verifySuperuser',(req,res,next)=>{
- console.log("[verifySuperuser] Called")
+
+app.get('/verifySupervisor',(req,res,next)=>{
+ console.log("[verifySupervisor] Called")
  console.log(req.headers.authorization)
- verifySuperuser(req,res,next);
+ verifySupervisor(req,res,next);
 },(req,res)=>{
     var user = req.user;
     res.json({is_successful:true,user:user})
