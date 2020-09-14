@@ -1,6 +1,8 @@
 let express = require("express");
 let bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+const http = require("http");
+const https = require("https");
 let loginUser = require("./js/loginUser");
 let loginAdmin = require("./js/loginAdmin");
 let loginSupervisor = require("./js/loginSupervisor");
@@ -29,11 +31,14 @@ app.use(function (req, res, next) {
   next();
 });
 // <---- End Of Setting Up CORS --->
-const PORT = 25565;
 // APP LISTEN
-app.listen(PORT, () => {
-  console.log("Sarveksana Backend is running..");
-});
+http.createServer(app).listen(8080);
+var sslOptions = {
+  key: fs.readFileSync("key.pem"),
+  cert: fs.readFileSync("cert.pem"),
+};
+https.createServer(sslOptions, app).listen(25565);
+
 app.get("/", (req, res) => {
   res.send("hi");
 });
