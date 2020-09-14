@@ -33,13 +33,7 @@ app.use(function (req, res, next) {
 });
 // <---- End Of Setting Up CORS --->
 // APP LISTEN
-http.createServer(app).listen(25564);
-var sslOptions = {
-  passphrase: "1234",
-  key: fs.readFileSync("key.pem"),
-  cert: fs.readFileSync("cert.pem"),
-};
-https.createServer(sslOptions, app).listen(25565);
+app.listen(25565);
 
 app.get("/", (req, res) => {
   res.send("hi");
